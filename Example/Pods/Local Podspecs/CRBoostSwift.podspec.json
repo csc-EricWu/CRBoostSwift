@@ -1,0 +1,21 @@
+{
+  "name": "CRBoostSwift",
+  "version": "0.1.0",
+  "summary": "A short description of CRBoostSwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/csc-EricWu/CRBoostSwift",
+  "license": {
+    "type": "MIT"
+  },
+  "authors": {
+    "csc-EricWu": "starring.wu@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/csc-EricWu/CRBoostSwift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CRBoostSwift/Classes/**/*"
+}

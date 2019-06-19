@@ -42,9 +42,8 @@
 		77CA9DBAEBD7A96AB0512FDA /* Pods-CRBoostSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRBoostSwift_Tests.release.xcconfig"; path = "Target Support Files/Pods-CRBoostSwift_Tests/Pods-CRBoostSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		845504E04A40AE9EC51A8750 /* Pods_CRBoostSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRBoostSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E89C38EEAB243ED7193F44 /* Pods-CRBoostSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRBoostSwift_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CRBoostSwift_Tests/Pods-CRBoostSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A1C6BD024AF802CE9A8FA9BE /* CRBoostSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CRBoostSwift.podspec; path = ../CRBoostSwift.podspec; sourceTree = "<group>"; };
-		AF6099B197121876333CFBAC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B1AD7AFD79F2558B37AA9927 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A1C6BD024AF802CE9A8FA9BE /* CRBoostSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CRBoostSwift.podspec; path = ../CRBoostSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B1AD7AFD79F2558B37AA9927 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DA0A16488ED230CD7307EEB7 /* Pods-CRBoostSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRBoostSwift_Example.release.xcconfig"; path = "Target Support Files/Pods-CRBoostSwift_Example/Pods-CRBoostSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F0C9210E93EC68FED7F76CDA /* Pods_CRBoostSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRBoostSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,7 +142,6 @@
 			children = (
 				A1C6BD024AF802CE9A8FA9BE /* CRBoostSwift.podspec */,
 				B1AD7AFD79F2558B37AA9927 /* README.md */,
-				AF6099B197121876333CFBAC /* LICENSE */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -156,7 +154,6 @@
 				93E89C38EEAB243ED7193F44 /* Pods-CRBoostSwift_Tests.debug.xcconfig */,
 				77CA9DBAEBD7A96AB0512FDA /* Pods-CRBoostSwift_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +224,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -313,11 +311,23 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CRBoostSwift_Example/Pods-CRBoostSwift_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BSBacktraceLogger/BSBacktraceLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/CRBoostSwift/CRBoostSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PNChart/PNChart.framework",
+				"${BUILT_PRODUCTS_DIR}/UICountingLabel/UICountingLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
+				"${BUILT_PRODUCTS_DIR}/fishhook/fishhook.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSBacktraceLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRBoostSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PNChart.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICountingLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fishhook.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

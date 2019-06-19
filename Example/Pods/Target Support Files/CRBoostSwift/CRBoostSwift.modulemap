@@ -1,0 +1,6 @@
+framework module CRBoostSwift {
+  umbrella header "CRBoostSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
