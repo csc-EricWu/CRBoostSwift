@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CRBoostSwift_Example' do
+  pod 'CRBoostSwift', :path => '../'
+
+  target 'CRBoostSwift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
