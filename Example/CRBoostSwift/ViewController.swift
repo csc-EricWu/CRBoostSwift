@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CRBoostSwift
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+jsonstyle
+        let iskind = CRKindClass(self, UIViewController)
+        print(iskind)
+    }
 }
 
