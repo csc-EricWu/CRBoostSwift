@@ -13,184 +13,265 @@ import Foundation
 // MARK: - foundation
 
 //==================object==================
-let CRNull = NSNull()
+public let CRNull = NSNull()
 
 //==================date==================
-let CRCOMPS_DATE: NSCalendar.Unit = [NSCalendar.Unit.year, NSCalendar.Unit.month, NSCalendar.Unit.day]
-let CRCOMPS_TIME: NSCalendar.Unit = [NSCalendar.Unit.hour, NSCalendar.Unit.minute, NSCalendar.Unit.second]
+public let CRCOMPS_DATE: NSCalendar.Unit = [NSCalendar.Unit.year, NSCalendar.Unit.month, NSCalendar.Unit.day]
+public let CRCOMPS_TIME: NSCalendar.Unit = [NSCalendar.Unit.hour, NSCalendar.Unit.minute, NSCalendar.Unit.second]
 
 // MARK: - Default
 
-let kBracketBigBegin = "{"
-let kBracketBigEnd = "}"
-let kSeparatorComma = ","
-let kSeparatorSlash = "/"
-let kSeparatorDot = "."
-let kSymbolQuestion = "?"
-let kSeparatorBitAnd = "&"
-let kSymbolEqual = "="
-let kWhitespace = " "
-let kEmptyString = ""
-let kSeparatorSolidDot = "●"
+public let kBracketBigBegin = "{"
+public let kBracketBigEnd = "}"
+public let kSeparatorComma = ","
+public let kSeparatorSlash = "/"
+public let kSeparatorDot = "."
+public let kSymbolQuestion = "?"
+public let kSeparatorBitAnd = "&"
+public let kSymbolEqual = "="
+public let kWhitespace = " "
+public let kEmptyString = ""
+public let kSeparatorSolidDot = "●"
 
 // range
 
-let JSON_RANGE_KEY = "range"
+public let JSON_RANGE_KEY = "range"
 
 // color
-let JSON_COLOR_KEY = "color"
+public let JSON_COLOR_KEY = "color"
 // style
-let JSON_STYLE_KEY = "style"
+public let JSON_STYLE_KEY = "style"
 // size
-let JSON_SIZE_KEY = "size"
-let JSON_WIDTH_KEY = "width"
-let JSON_HEIGHT_KEY = "height"
-let JSON_NEW_KEY = "new"
-let JSON_OLD_KEY = "old"
+public let JSON_SIZE_KEY = "size"
+public let JSON_WIDTH_KEY = "width"
+public let JSON_HEIGHT_KEY = "height"
+public let JSON_NEW_KEY = "new"
+public let JSON_OLD_KEY = "old"
 
 // MARK: - class
 
-func CRKindClass(obj: AnyObject, cla: AnyClass) -> Bool {
-    return obj.isKind(of: cla.self)
-}
+// public func CRKindClass(obj: AnyObject, cla: Any) -> Bool {
+//    return obj.isKind(of: type(of: cla))
+// }
 
-func CRMemberClass(obj: AnyObject, cla: AnyClass) -> Bool {
-    return obj.isMember(of: cla.self)
-}
+// public func CRMemberClass(obj: AnyObject, cla: AnyClass) -> Bool {
+//    return obj.isMember(of: type(of: cla))
+// }
 
 // MARK: - notification
 
-func CRRegisterNotification(obs: Any, sel: Selector, nam: String) {
+public func CRRegisterNotification(obs: Any, sel: Selector, nam: String) {
     CRRegisterNotification(obs: obs, sel: sel, nam: nam, obj: nil)
 }
 
-func CRRegisterNotification(obs: Any, sel: Selector, nam: String, obj: AnyObject?) {
+public func CRRegisterNotification(obs: Any, sel: Selector, nam: String, obj: AnyObject?) {
     NotificationCenter.default.addObserver(obs, selector: sel, name: Notification.Name(nam), object: obj)
 }
 
-func CRUnregisterNotification(obs: Any) {
+public func CRUnregisterNotification(obs: Any) {
     NotificationCenter.default.removeObserver(obs)
 }
 
-func CRUnregisterNotification(obs: Any, sel: Selector, nam: String) {
+public func CRUnregisterNotification(obs: Any, sel: Selector, nam: String) {
     CRRegisterNotification(obs: obs, sel: sel, nam: nam, obj: nil)
 }
 
-func CRUnregisterNotification(obs: Any, sel: Selector, nam: String, obj: AnyObject?) {
+public func CRUnregisterNotification(obs: Any, sel: Selector, nam: String, obj: AnyObject?) {
     NotificationCenter.default.removeObserver(obs, name: NSNotification.Name(nam), object: obj)
 }
 
-func CRPostNotification(name: String) {
+public func CRPostNotification(name: String) {
     CRPostNotification(name: name, obj: nil)
 }
 
-func CRPostNotification(name: String, obj: Any?) {
+public func CRPostNotification(name: String, obj: Any?) {
     CRPostNotification(name: name, obj: obj, info: nil)
 }
 
-func CRPostNotification(name: String, obj: Any?, info: [AnyHashable: Any]?) {
+public func CRPostNotification(name: String, obj: Any?, info: [AnyHashable: Any]?) {
     NotificationCenter.default.post(name: NSNotification.Name(name), object: obj, userInfo: info)
 }
 
 // MARK: - image
 
-func CRImageFiled(name: String) -> UIImage? {
+public func CRImageFiled(name: String) -> UIImage? {
     return UIImage(contentsOfFile: name)
 }
 
-func CRImageViewNamed(name: String?) -> UIImageView? {
+public func CRImageViewNamed(name: String?) -> UIImageView? {
     return UIImageView(image: UIImage(named: name ?? ""))
 }
 
-func CRImageViewFiled(path: String) -> UIImageView? {
+public func CRImageViewFiled(path: String) -> UIImageView? {
     return UIImageView(image: CRImageFiled(name: path))
 }
 
 // MARK: - device
 
-let IS_IPHONE5 = UIScreen.instancesRespond(to: #selector(getter: UIScreen.main.currentMode)) ? CGSize(width: 640, height: 1136).equalTo(UIScreen.main.currentMode!.size) : false
-let IS_IPHONE6 = UIScreen.instancesRespond(to: #selector(getter: UIScreen.main.currentMode)) ? CGSize(width: 750, height: 1334).equalTo(UIScreen.main.currentMode!.size) : false
-let IS_IPHONEPLUS = UIScreen.instancesRespond(to: #selector(getter: UIScreen.main.currentMode)) ? CGSize(width: 1242, height: 2208).equalTo(UIScreen.main.currentMode!.size) : false
+public let IS_IPHONE5 = UIScreen.instancesRespond(to: #selector(getter: UIScreen.main.currentMode)) ? CGSize(width: 640, height: 1136).equalTo(UIScreen.main.currentMode!.size) : false
+public let IS_IPHONE6 = UIScreen.instancesRespond(to: #selector(getter: UIScreen.main.currentMode)) ? CGSize(width: 750, height: 1334).equalTo(UIScreen.main.currentMode!.size) : false
+public let IS_IPHONEPLUS = UIScreen.instancesRespond(to: #selector(getter: UIScreen.main.currentMode)) ? CGSize(width: 1242, height: 2208).equalTo(UIScreen.main.currentMode!.size) : false
 
-let IS_IPAD = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad
-let kSystemVersion = Float(UIDevice.current.systemVersion)!
-let IS_IOS8 = (kSystemVersion >= Float(8.0) && kSystemVersion <= Float(9.0))
-let IS_IOS9 = (kSystemVersion >= Float(9.0) && kSystemVersion <= Float(10.0))
-let IS_IOS10 = (kSystemVersion >= Float(10.0) && kSystemVersion <= Float(11.0))
-let IS_IOS11 = (kSystemVersion >= Float(11.0) && kSystemVersion <= Float(12.0))
-let IS_IOS12 = (kSystemVersion >= Float(12.0) && kSystemVersion <= Float(13.0))
-let IS_IOS13 = (kSystemVersion >= Float(13.0) && kSystemVersion <= Float(14.0))
+public let IS_IPAD = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad
+public let kSystemVersion = Float(UIDevice.current.systemVersion)!
+public let IS_IOS8 = (kSystemVersion >= Float(8.0) && kSystemVersion <= Float(9.0))
+public let IS_IOS9 = (kSystemVersion >= Float(9.0) && kSystemVersion <= Float(10.0))
+public let IS_IOS10 = (kSystemVersion >= Float(10.0) && kSystemVersion <= Float(11.0))
+public let IS_IOS11 = (kSystemVersion >= Float(11.0) && kSystemVersion <= Float(12.0))
+public let IS_IOS12 = (kSystemVersion >= Float(12.0) && kSystemVersion <= Float(13.0))
+public let IS_IOS13 = (kSystemVersion >= Float(13.0) && kSystemVersion <= Float(14.0))
 
 // application status
-let CRAPP_IN_BACKGROUND = UIApplication.shared.applicationState == UIApplicationState.background
-func CRDisableAppIdleTimer(flag: Bool) {
+public let CRAPP_IN_BACKGROUND = UIApplication.shared.applicationState == UIApplicationState.background
+public func CRDisableAppIdleTimer(flag: Bool) {
     UIApplication.shared.isIdleTimerDisabled = flag
 }
 
 //==================network==================
-func CRDisplayNetworkIndicator(flag: Bool) {
+public func CRDisplayNetworkIndicator(flag: Bool) {
     UIApplication.shared.isNetworkActivityIndicatorVisible = flag
 }
 
 // MARK: - system
 
-let CRAppBuild = Bundle.main.infoDictionary![kCFBundleVersionKey as String] as! String
-let CRAppVersionShort = Bundle.main.infoDictionary!["CRAppVersionShort"] as! String
-let CRAppName = Bundle.main.infoDictionary!["CFBundleDisplayName"] as! String
+public let CRAppBuild = Bundle.main.infoDictionary![kCFBundleVersionKey as String] as! String
+public let CRAppVersionShort = Bundle.main.infoDictionary!["CRAppVersionShort"] as! String
+public let CRAppName = Bundle.main.infoDictionary!["CFBundleDisplayName"] as! String
 
-let CRIdfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
-let CRIdfv = UIDevice.current.identifierForVendor?.uuidString
+public let CRIdfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+public let CRIdfv = UIDevice.current.identifierForVendor?.uuidString
 
 // MARK: - App Default
 
-let CRSharedApp = UIApplication.shared
-let CRAppDelegate = CRSharedApp.delegate!
+public let CRSharedApp = UIApplication.shared
+public let CRAppDelegate = CRSharedApp.delegate!
 
-let CRNotificationCenter = NotificationCenter.default
-let CRCurrentDevice = UIDevice.current
-let CRBundle = Bundle.main
-let CRMainScreen = UIScreen.main
-let CRCurrentLanguage = Locale.preferredLanguages.first
-let CRScreenScaleFactor = CRMainScreen.scale
-let CRFileMgr = FileManager.default
-let CRRunLoop = RunLoop.main
-let CRMainScreenW = CRMainScreen.bounds.width
-let CRMainScreenH = CRMainScreen.bounds.height
+public let CRNotificationCenter = NotificationCenter.default
+public let CRCurrentDevice = UIDevice.current
+public let CRBundle = Bundle.main
+public let CRMainScreen = UIScreen.main
+public let CRCurrentLanguage = Locale.preferredLanguages.first
+public let CRScreenScaleFactor = CRMainScreen.scale
+public let CRFileMgr = FileManager.default
+public let CRRunLoop = RunLoop.main
+public let CRMainScreenW = CRMainScreen.bounds.width
+public let CRMainScreenH = CRMainScreen.bounds.height
 //==================user defaults==================
-let CRUserDefaults = UserDefaults.standard
-func CRUserObj(key: String) -> Any? {
+public let CRUserDefaults = UserDefaults.standard
+public func CRUserObj(key: String) -> Any? {
     return CRUserDefaults.object(forKey: key)
 }
 
-func CRUserBOOL(key: String) -> Bool {
+public func CRUserBOOL(key: String) -> Bool {
     return CRUserDefaults.bool(forKey: key)
 }
 
-func CRUserObj(key: String) -> String? {
+public func CRUserObj(key: String) -> String? {
     return CRUserDefaults.string(forKey: key)
 }
 
-func CRUserInteger(key: String) -> Int {
+public func CRUserInteger(key: String) -> Int {
     return CRUserDefaults.integer(forKey: key)
 }
 
-func CRUserSetObj(obj: Any?, key: String) {
+public func CRUserSetObj(obj: Any?, key: String) {
     CRUserDefaults.set(obj, forKey: key)
 }
 
-func CRUserSetBOOL(boo: Bool, key: String) {
+public func CRUserSetBOOL(boo: Bool, key: String) {
     CRUserDefaults.set(boo, forKey: key)
 }
 
-func CRUserSetInteger(inte: Int, key: String) {
+public func CRUserSetInteger(inte: Int, key: String) {
     CRUserDefaults.set(inte, forKey: key)
 }
 
-func CRUserRemoveObj(key: String) {
+public func CRUserRemoveObj(key: String) {
     CRUserDefaults.removeObject(forKey: key)
 }
 
-func CRUserIsExists(key: String) -> Bool {
+public func CRUserIsExists(key: String) -> Bool {
     return CRUserDefaults.objectIsForced(forKey: key)
 }
-// MARK: - Archive
+
+// MARK: - Archive
+
+public func CRKeyedUnarchiver(path: String) {
+    NSKeyedUnarchiver.unarchiveObject(withFile: path)
+}
+
+public func CRKeyedArchiver(obj: Any, path: String) {
+    NSKeyedArchiver.archiveRootObject(obj, toFile: path)
+}
+
+// MARK: - GCD
+
+//==================block==================
+public func CRBackgroundTask(block: @escaping () -> Void) {
+    DispatchQueue.global(qos: .background).async {
+        block()
+    }
+}
+
+public func CRMainThreadTask(block: @escaping () -> Void) {
+    if Thread.isMainThread {
+        block()
+    } else {
+        DispatchQueue.main.async {
+            block()
+        }
+    }
+}
+
+/*
+ {[weak self] () -> void in
+ if public let strongSelf = self {
+ strongSelf.doSomething1()
+ }
+ }
+ {[weak self] () -> void in
+ guard public let `self` = self else { return }
+ self.doSomething()
+ }
+ */
+public typealias CRVoidBlock = () -> Void
+public typealias CRCompletionTask = CRVoidBlock
+
+// MARK: - color
+
+//==================color==================
+
+public func CRColorPattern(name: String) -> UIColor {
+    return UIColor(patternImage: CRImageFiled(name: name) ?? UIImage())
+}
+
+// r, g, b range from 0 - 1.0
+public func CRRGBA(r: Float, g: Float, b: Float, a: Float) -> UIColor {
+    return UIColor(red: CGFloat(r / 255.0), green: CGFloat(g / 255.0), blue: CGFloat(b / 255), alpha: CGFloat(a))
+}
+
+public func CRRGB(r: Float, g: Float, b: Float, a: Float) -> UIColor {
+    return CRRGBA(r: r, g: g, b: b, a: 1.0)
+}
+
+// rgbValue is a Hex vaule without prefix 0x
+public func CRRGBA_X(rgb: Int, a: Float) -> UIColor {
+    return CRRGBA(r: Float((rgb & 0xFF0000) >> 16), g: Float((rgb & 0xFF00) >> 8), b: (Float(rgb & 0xFF)), a: a)
+}
+
+public func CRRGB_X(rgb: Int) -> UIColor {
+    return CRRGBA_X(rgb: rgb, a: 1)
+}
+
+// MARK: - execution time
+
+// MARK: - log
+
+// #   define ULOG(fmt, ...)  { \
+//    NSString *title = [NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__];  \
+//    NSString *msg = [NSString stringWithFormat:fmt, ##__VA_ARGS__];  \
+//    UIAlertController *alertCtrl = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];\
+//    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];\
+//    [alertCtrl addAction:alertAction];\
+//    [CRTopViewController() presentViewController:alertCtrl animated:YES completion:nil];\
+// }

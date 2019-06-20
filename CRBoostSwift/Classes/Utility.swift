@@ -89,9 +89,10 @@ public class Utility {
     }
 
     // MARK: - View
-    public class func presentView(view: UIView,animated:Bool ){
-    
+
+    public class func presentView(view: UIView, animated: Bool) {
     }
+
 //    + (void)presentView:(UIView *)view animated:(BOOL)animated
 //    {
 //    UIViewController *root = CRRootViewController();

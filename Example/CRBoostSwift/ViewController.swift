@@ -21,8 +21,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-jsonstyle
-        let iskind = CRKindClass(self, UIViewController)
         print(iskind)
     }
 }
