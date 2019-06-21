@@ -9,35 +9,42 @@ import AVFoundation
 import UIKit
 
 public typealias AlertAction = (_ action: UIAlertAction) -> Void
-
+@discardableResult
 public func CRRadian2degrees(radian: Double) -> Double {
     return (radian) * 180.0 / Double.pi
 }
 
+@discardableResult
 public func CRDegrees2radian(degree: Double) -> Double {
     return Double.pi * degree / 180.0
 }
 
+@discardableResult
 public func CRRadianOfTransform(transform: CGAffineTransform) -> CGFloat {
     return atan2(transform.b, transform.a)
 }
 
+@discardableResult
 public func CRHorizontalLength(p1: CGPoint, p2: CGPoint) -> CGFloat {
     return abs(p1.x - p2.x)
 }
 
+@discardableResult
 public func CRVerticalLength(p1: CGPoint, p2: CGPoint) -> CGFloat {
     return abs(p1.y - p2.y)
 }
 
+@discardableResult
 public func CRCenterX(p1: CGPoint, p2: CGPoint) -> CGFloat {
     return (p1.x + p2.x) / 2
 }
 
+@discardableResult
 public func CRCenterY(p1: CGPoint, p2: CGPoint) -> CGFloat {
     return (p1.y + p2.y) / 2
 }
 
+@discardableResult
 public func CRArcAngle(start: CGPoint, end: CGPoint) -> CGFloat {
     let originPoint = CGPoint(x: end.x - start.x, y: start.y - end.y)
     var radians = atan2(originPoint.y, originPoint.x)
@@ -46,6 +53,7 @@ public func CRArcAngle(start: CGPoint, end: CGPoint) -> CGFloat {
     return CGFloat(Double.pi * 2) - radians
 }
 
+@discardableResult
 public func CRDistanceCompare(start: CGPoint, end: CGPoint) -> CGFloat {
     let originX = end.x - start.x
     let originY = end.y - start.y
@@ -53,54 +61,66 @@ public func CRDistanceCompare(start: CGPoint, end: CGPoint) -> CGFloat {
     return (originX * originX + originY * originY)
 }
 
+@discardableResult
 public func CRDistance(start: CGPoint, end: CGPoint) -> CGFloat {
     return sqrt(CRDistanceCompare(start: start, end: end))
 }
 
+@discardableResult
 public func CRDistance(start: CGPoint, end: CGPoint) -> CGPoint {
     return CGPoint(x: (end.x + start.x) / 2, y: (end.y + start.y) / 2)
 }
 
 // MARK: - graphics
 
+@discardableResult
 public func CRPointPlus(p1: CGPoint, p2: CGPoint) -> CGPoint {
     return CGPoint(x: p1.x + p2.x, y: p1.y + p2.y)
 }
 
+@discardableResult
 public func CRPointOffset(p1: CGPoint, x: CGFloat, y: CGFloat) -> CGPoint {
     return CGPoint(x: p1.x + x, y: p1.y + y)
 }
 
+@discardableResult
 public func CRPointSubtract(p1: CGPoint, p2: CGPoint) -> CGPoint {
     return CGPoint(x: p1.x - p2.x, y: p1.y - p2.y)
 }
 
+@discardableResult
 public func CRPointSacle(point: CGPoint, factor: CGFloat) -> CGPoint {
     return CGPoint(x: point.x * factor, y: point.y * factor)
 }
 
+@discardableResult
 public func CRFrameCenter(rect: CGRect) -> CGPoint {
     return CGPoint(x: rect.midX, y: rect.midY)
 }
 
+@discardableResult
 public func CRBoundCenter(rect: CGRect) -> CGPoint {
     return CGPoint(x: rect.width / 2, y: rect.height / 2)
 }
 
+@discardableResult
 public func CRLocationInRect(rect: CGRect, location: CGPoint) -> CGPoint {
     return CGPoint(x: location.x - rect.minX, y: location.y - rect.minY)
 }
 
+@discardableResult
 public func CRLocationRatio(bounds: CGRect, location: CGPoint) -> CGPoint {
     let location2 = CRLocationInRect(rect: bounds, location: location)
     return CGPoint(x: location2.x / bounds.width, y: location2.y / bounds.height)
 }
 
+@discardableResult
 public func CRSize2Point(size: CGSize) -> CGPoint {
     return CGPoint(x: size.width, y: size.height)
 }
 
 //==================rect==================
+@discardableResult
 public func CRCenteredFrame(frame: CGRect, center: CGPoint) -> CGRect {
     var frame2 = frame
 
@@ -108,36 +128,43 @@ public func CRCenteredFrame(frame: CGRect, center: CGPoint) -> CGRect {
     return frame2
 }
 
+@discardableResult
 public func CRRectAddedHeight(rect: CGRect, height: CGFloat) -> CGRect {
     let rect2 = CGRect(x: rect.minX, y: rect.minY, width: rect.width, height: rect.height + height)
     return rect2
 }
 
+@discardableResult
 public func CRRectUpdatedHeight(rect: CGRect, height: CGFloat) -> CGRect {
     let rect2 = CGRect(x: rect.minX, y: rect.minY, width: rect.width, height: height)
     return rect2
 }
 
 //=====================area==========================
+@discardableResult
 public func CRSizeArea(size: CGSize) -> CGFloat {
     return size.width * size.height
 }
 
+@discardableResult
 public func CRSizeArea(frame: CGRect) -> CGFloat {
     return CRSizeArea(size: frame.size)
 }
 
 //==================size: a new one==================
+@discardableResult
 public func CRSizeEnlarged(size: CGSize, width: CGFloat, height: CGFloat) -> CGSize {
     return CGSize(width: size.width + width, height: size.height + height)
 }
 
+@discardableResult
 public func CRSizeZoomed(size: CGSize, factor: CGFloat) -> CGSize {
     return CGSize(width: size.width * factor, height: size.height * factor)
 }
 
 // MARK: - device
 
+@discardableResult
 public func CRScreenBounds(landscape: Bool) -> CGRect {
     var rect = UIScreen.main.bounds
     if landscape && rect.width < rect.height {
@@ -148,20 +175,24 @@ public func CRScreenBounds(landscape: Bool) -> CGRect {
     return rect
 }
 
+@discardableResult
 public func CRScreenIsLandscape() -> Bool {
     return UIInterfaceOrientation.landscapeLeft.isLandscape
     // UIDeviceOrientationIsLandscape(CRCurrentDevice.orientation);
 }
 
+@discardableResult
 public func CRScreenSize() -> CGSize {
     let rect = CRScreenBounds(landscape: CRScreenIsLandscape())
     return rect.size
 }
 
+@discardableResult
 public func CRScreenRect() -> CGRect {
     return CRScreenBounds(landscape: CRScreenIsLandscape())
 }
 
+@discardableResult
 public func CRIsIphoneX() -> Bool {
     return (CRScreenSize().equalTo(CGSize(width: 375, height: 812)) || // X  or Xs
         CRScreenSize().equalTo(CGSize(width: 812, height: 375)) || // X  or Xs
@@ -170,6 +201,7 @@ public func CRIsIphoneX() -> Bool {
     )
 }
 
+@discardableResult
 public func CRMainWindow() -> UIWindow {
     var mainWindow: UIWindow? = UIApplication.shared.delegate?.window ?? nil
     if mainWindow == nil {
@@ -181,26 +213,32 @@ public func CRMainWindow() -> UIWindow {
     return mainWindow!
 }
 
+@discardableResult
 public func CRRootViewController() -> UIViewController {
     return CRMainWindow().rootViewController!
 }
 
+@discardableResult
 public func CRRootView() -> UIView {
     return CRRootViewController().view
 }
 
+@discardableResult
 public func CRRootTabBar() -> UITabBarController? {
     return CRRootViewController() as? UITabBarController
 }
 
+@discardableResult
 public func CRRootNaviation() -> UINavigationController? {
     return CRRootViewController() as? UINavigationController
 }
 
+@discardableResult
 public func CRNaviationHeight() -> CGFloat {
     return UIApplication.shared.statusBarFrame.height + 44
 }
 
+@discardableResult
 public func CRSafeAreaInsets() -> UIEdgeInsets {
     var insets = UIEdgeInsets.zero
     if #available(iOS 11.0, *) {
@@ -210,10 +248,12 @@ public func CRSafeAreaInsets() -> UIEdgeInsets {
     return insets
 }
 
+@discardableResult
 public func CRBottomAdditionalHeight() -> CGFloat {
     return CRSafeAreaInsets().bottom
 }
 
+@discardableResult
 public func CRTabBarHeight(controller: UIViewController) -> CGFloat {
     var height: CGFloat = 0
     if controller.tabBarController != nil && !(controller.tabBarController!.tabBar.isHidden) {
@@ -223,6 +263,7 @@ public func CRTabBarHeight(controller: UIViewController) -> CGFloat {
     return height
 }
 
+@discardableResult
 public func CRPopToViewController(navigation: UINavigationController?, controller: UIViewController?, animated: Bool) -> Bool {
     var found = false
     guard navigation != nil && controller != nil else {
@@ -240,6 +281,7 @@ public func CRPopToViewController(navigation: UINavigationController?, controlle
     return found
 }
 
+@discardableResult
 public func CRTopViewController(controller: UIViewController = CRRootViewController()) -> UIViewController? {
     if controller.presentedViewController != nil {
         return CRTopViewController(controller: controller)
@@ -259,6 +301,7 @@ public func CRTopViewController(controller: UIViewController = CRRootViewControl
     }
 }
 
+@discardableResult
 public func CRTopMostController() -> UIViewController {
     var topviewController = CRRootViewController()
     while topviewController.presentedViewController != nil {
@@ -267,16 +310,19 @@ public func CRTopMostController() -> UIViewController {
     return topviewController
 }
 
+@discardableResult
 public func CRKeyboardHide() -> Bool {
     return CRMainWindow().endEditing(true)
 }
 
+@discardableResult
 public func CRSystemVolume() -> Float {
     return AVAudioSession.sharedInstance().outputVolume
 }
 
 // MARK: - file
 
+@discardableResult
 public func CRFileSize(path: String) -> UInt64 {
     if let attributes = try? FileManager.default.attributesOfItem(atPath: path) {
         return attributes[FileAttributeKey.size] as! UInt64
@@ -284,6 +330,7 @@ public func CRFileSize(path: String) -> UInt64 {
     return 0
 }
 
+@discardableResult
 public func CRFileModifyDate(path: String) -> Date? {
     if let attributes = try? FileManager.default.attributesOfItem(atPath: path) {
         return attributes[FileAttributeKey.modificationDate] as? Date
@@ -291,11 +338,13 @@ public func CRFileModifyDate(path: String) -> Date? {
     return nil
 }
 
+@discardableResult
 public func CRBundlePath(fileName: String) -> String {
     let path = Bundle.main.resourcePath! as NSString
     return path.appendingPathComponent(fileName)
 }
 
+@discardableResult
 public func CRFileExistsAtPath(path: String) -> Bool {
     return FileManager.default.fileExists(atPath: path)
 }
@@ -328,10 +377,12 @@ public func CRPresentAlert(title: String?, msg: String, handler: AlertAction? = 
     return alert
 }
 
+@discardableResult
 public func CRPresentAlert(title: String?, msg: String) -> UIAlertController {
     return CRPresentAlert(title: title, msg: msg, handler: nil, canel: NSLocalizedString("OK", comment: ""))
 }
 
+@discardableResult
 public func CRControllerWithStoryboard(name: String, identifier: String) -> Any {
     return UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: identifier)
 }
@@ -339,11 +390,12 @@ public func CRControllerWithStoryboard(name: String, identifier: String) -> Any 
 // MARK: - foundation
 
 // Bitwise
-
+@discardableResult
 public func CRBitwiseHas(base: Int, bit: Int) -> Bool {
     return (base & bit) == bit
 }
 
+@discardableResult
 public func CRUUIDString() -> String {
     return NSUUID().uuidString
 }
@@ -362,6 +414,7 @@ public func CRRunOnMainThread(task: @escaping CRVoidBlock) {
 
 // MARK: - json
 
+@discardableResult
 public func CRJSONFromPath(path: String) -> Any? {
     if let jsonData = NSData(contentsOfFile: path) {
         if let json = try? JSONSerialization.jsonObject(with: jsonData as Data, options: .allowFragments)
@@ -370,6 +423,7 @@ public func CRJSONFromPath(path: String) -> Any? {
     return nil
 }
 
+@discardableResult
 public func CRJSONFromString(string: String?) -> Any? {
     if let text = string {
         if let jsonData = text.data(using: .utf8) {
@@ -380,22 +434,68 @@ public func CRJSONFromString(string: String?) -> Any? {
     return nil
 }
 
+@discardableResult
+public func CRJSONToString(obj: Any) -> String? {
+    if let data = try? JSONSerialization.data(withJSONObject: obj, options: []) {
+        if let json = String(data: data, encoding: .utf8) {
+            return json
+        }
+    }
+    return nil
+}
+
+@discardableResult
 public func CRTimestamp() -> Int64 {
     let timeInterval = Date().timeIntervalSince1970 * 1000
-
     return Int64(timeInterval)
 }
 
+@discardableResult
 public func CRJSONIsArray(json: AnyObject?) -> Bool {
     return json is [Any]
 }
 
+@discardableResult
 public func CRJSONIsDictionary(json: AnyObject?) -> Bool {
     return json is Dictionary<String, Any>
 }
 
+@discardableResult
+public func CRJSONFromQuery(query: String) -> [String: String]? {
+    if CRIsNullOrEmpty(text: query) {
+        return nil
+    }
+    var cmp = URLComponents(string: query)
+    if CRIsNullOrEmpty(text: cmp?.query) {
+        cmp?.query = query
+    }
+    var json = [String: String]()
+    guard let queryItems = cmp?.queryItems else { return nil }
+
+    for item in queryItems {
+        if !CRIsNullOrEmpty(text: item.name) && !CRIsNullOrEmpty(text: item.value) {
+            json[item.name] = item.value
+        }
+    }
+    return json.count > 0 ? json : nil
+}
+
+@discardableResult
+public func CRQueryFromJSON(json: [String: String]?) -> String? {
+    guard json != nil && json!.count > 0 else {
+        return nil
+    }
+    var queryList = [String]()
+    json!.forEach { (key: String, value: Any) in
+        let query = String("\(key)=\(value)")
+        queryList.append(query)
+    }
+    return queryList.joined(separator: "&")
+}
+
 // MARK: - match
 
+@discardableResult
 public func CRMatches(pattern: String, text: String?) -> [NSTextCheckingResult]? {
     guard let string = text else { return nil }
     if string.count <= 0 {
@@ -407,15 +507,17 @@ public func CRMatches(pattern: String, text: String?) -> [NSTextCheckingResult]?
     return nil
 }
 
+@discardableResult
 public func CRMatch(pattern: String, text: String?) -> NSTextCheckingResult? {
     return CRMatches(pattern: pattern, text: text)?.first
 }
 
+@discardableResult
 public func CRIsMatch(pattern: String, text: String?) -> Bool {
-    if CRIsNullOrEmpty(text: text as AnyObject?) {
+    if CRIsNullOrEmpty(text: text) {
         return false
     }
-    if CRIsNullOrEmpty(text: pattern as AnyObject) {
+    if CRIsNullOrEmpty(text: pattern) {
         return true
     }
     if CRMatch(pattern: pattern, text: text) == nil {
@@ -424,6 +526,7 @@ public func CRIsMatch(pattern: String, text: String?) -> Bool {
     return true
 }
 
+@discardableResult
 public func CRIsEmail(text: String?) -> Bool {
     let pattern = "^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$"
     return CRIsMatch(pattern: pattern, text: text)
@@ -437,27 +540,31 @@ public func CRIsEmail(text: String?) -> Bool {
  * @param text 待检测的字符串
  * @return 待检测的字符串
  */
+@discardableResult
 public func CRIsPhoneNumber(text: String?) -> Bool {
     let pattern = "^[1][3-9][0-9]{9}$"
     return CRIsMatch(pattern: pattern, text: text)
 }
 
+@discardableResult
 public func CRIsInteger(text: String?) -> Bool {
     let pattern = "^\\d+$"
     return CRIsMatch(pattern: pattern, text: text)
 }
 
+@discardableResult
 public func CRIsURL(text: String?) -> Bool {
     // (https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]
     let pattern = "(https?)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]"
     return CRIsMatch(pattern: pattern, text: text)
 }
 
-public func CRIsNullOrEmpty(text: AnyObject?) -> Bool {
-    if text is NSNull {
+@discardableResult
+public func CRIsNullOrEmpty(text: String?) -> Bool {
+    if (text as Any) is NSNull {
         return true
     }
-    if let string: String = text as? String {
+    if let string: String = text {
         guard !string.isEmpty && string != "(null)" && string != "<null>" else {
             return true
         }

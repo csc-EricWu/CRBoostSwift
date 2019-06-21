@@ -17,6 +17,7 @@
 		03FE0850ECF448FCB3F61B710913D366 /* doraemon_viewmetrics@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B0F6D4F28913BE7DFA5941E5FC95B9D /* doraemon_viewmetrics@2x.png */; };
 		0437D26FB70ED1AC5C7B363EB676A54B /* DoraemonBaseBigTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4A3C9502222B8AD5A93CB1FC61FCF7 /* DoraemonBaseBigTitleView.m */; };
 		063502333CD4E9C5529C0851D8B68F18 /* UIView+DoraemonViewMetrics.h in Headers */ = {isa = PBXBuildFile; fileRef = B00993F76489A3AD57D0025FB917B795 /* UIView+DoraemonViewMetrics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		072AFBEE22BD13DD00A96B2B /* Foundation+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072AFBEC22BD13B600A96B2B /* Foundation+CRBoost.swift */; };
 		07FFC880062B8344D5103D39934E7A28 /* doraemon_method_use_time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180B2BF0A83AD75A6D330D5E37D51FF1 /* doraemon_method_use_time@2x.png */; };
 		091B719F3E89D766DC21E65E7AF54DEA /* DoraemonVisualInfoWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 454CCAF98E68ACAF81C3E084D099CFF5 /* DoraemonVisualInfoWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0925AAD0D5DDD24A061D360D09F82D8C /* DoraemonMemoryUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = A8FE224931827884CA4864E704AD5EE6 /* DoraemonMemoryUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -559,6 +560,7 @@
 		05742FEF126F79D2501A702102EBB46C /* DoraemonMemoryOscillogramViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonMemoryOscillogramViewController.m; path = iOS/DoraemonKit/Src/Core/Plugin/Memory/Function/DoraemonMemoryOscillogramViewController.m; sourceTree = "<group>"; };
 		06821471A8C66AA90B5244CE5036D5C2 /* DoraemonNSURLProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonNSURLProtocol.m; path = iOS/DoraemonKit/Src/Core/Plugin/NetFlow/Function/DoraemonNSURLProtocol.m; sourceTree = "<group>"; };
 		068549D4F9A1E1AF3BB21924F7AE90CD /* DoraemonCrashUncaughtExceptionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonCrashUncaughtExceptionHandler.h; path = iOS/DoraemonKit/Src/Core/Plugin/Crash/Function/DoraemonCrashUncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		072AFBEC22BD13B600A96B2B /* Foundation+CRBoost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Foundation+CRBoost.swift"; path = "CRBoostSwift/Classes/Foundation+CRBoost.swift"; sourceTree = "<group>"; };
 		0740A9EF82F5A767A322B4BEED980115 /* doraemon_ui@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_ui@3x.png"; path = "iOS/DoraemonKit/Resource/doraemon_ui@3x.png"; sourceTree = "<group>"; };
 		077D4379186E4E33D61A35D30B9C227D /* UITextView+Placeholder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextView+Placeholder.h"; path = "Sources/UITextView+Placeholder.h"; sourceTree = "<group>"; };
 		07D03E44CD8D723E04DAB646CFA4B5FC /* DoraemonSandboxPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonSandboxPlugin.h; path = iOS/DoraemonKit/Src/Core/Plugin/Sanbox/DoraemonSandboxPlugin.h; sourceTree = "<group>"; };
@@ -1639,6 +1641,7 @@
 				426577D5CD26F2BCA153381A47C1A2DE /* CRMacros.swift */,
 				D521DA7F54B09258B54881FE57B2D809 /* CRMath.swift */,
 				9958604BECCD574764BF4AF213AFED14 /* Utility.swift */,
+				072AFBEC22BD13B600A96B2B /* Foundation+CRBoost.swift */,
 				F26A40C574634C6EBAFEE74447862E80 /* Pod */,
 				DEF5ACBCCFD433FD221BA8291A00D578 /* Support Files */,
 			);
@@ -2262,6 +2265,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					4DF6BA65687AA4231B3B388E7469B994 = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2646,6 +2654,7 @@
 			files = (
 				9E71D8799BF10A02C8C50FD18B80805A /* CRBoostSwift-dummy.m in Sources */,
 				D19465AB754CF22821A8D8445CE2EF67 /* CRMacros.swift in Sources */,
+				072AFBEE22BD13DD00A96B2B /* Foundation+CRBoost.swift in Sources */,
 				69B07FF24E4BB5D4FF290FD1ABB29DCE /* CRMath.swift in Sources */,
 				D473FD46C139C8C861072A83DC438841 /* Utility.swift in Sources */,
 			);
@@ -3394,6 +3403,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 030EA067D19923A283CCFCCB109AF28D /* BSBacktraceLogger.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3426,6 +3436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 030EA067D19923A283CCFCCB109AF28D /* BSBacktraceLogger.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3446,6 +3457,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

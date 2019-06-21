@@ -67,7 +67,8 @@ public class Utility {
 
     // MARK: - path
 
-    class func bundlePath() -> String! {
+    @discardableResult
+    public class func bundlePath() -> String! {
         return Bundle.main.resourcePath
     }
 

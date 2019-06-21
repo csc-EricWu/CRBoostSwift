@@ -94,14 +94,17 @@ public func CRPostNotification(name: String, obj: Any?, info: [AnyHashable: Any]
 
 // MARK: - image
 
+@discardableResult
 public func CRImageFiled(name: String) -> UIImage? {
     return UIImage(contentsOfFile: name)
 }
 
+@discardableResult
 public func CRImageViewNamed(name: String?) -> UIImageView? {
     return UIImageView(image: UIImage(named: name ?? ""))
 }
 
+@discardableResult
 public func CRImageViewFiled(path: String) -> UIImageView? {
     return UIImageView(image: CRImageFiled(name: path))
 }
@@ -158,18 +161,22 @@ public let CRMainScreenW = CRMainScreen.bounds.width
 public let CRMainScreenH = CRMainScreen.bounds.height
 //==================user defaults==================
 public let CRUserDefaults = UserDefaults.standard
+@discardableResult
 public func CRUserObj(key: String) -> Any? {
     return CRUserDefaults.object(forKey: key)
 }
 
+@discardableResult
 public func CRUserBOOL(key: String) -> Bool {
     return CRUserDefaults.bool(forKey: key)
 }
 
+@discardableResult
 public func CRUserObj(key: String) -> String? {
     return CRUserDefaults.string(forKey: key)
 }
 
+@discardableResult
 public func CRUserInteger(key: String) -> Int {
     return CRUserDefaults.integer(forKey: key)
 }
@@ -190,6 +197,7 @@ public func CRUserRemoveObj(key: String) {
     CRUserDefaults.removeObject(forKey: key)
 }
 
+@discardableResult
 public func CRUserIsExists(key: String) -> Bool {
     return CRUserDefaults.objectIsForced(forKey: key)
 }
@@ -240,25 +248,27 @@ public typealias CRCompletionTask = CRVoidBlock
 // MARK: - color
 
 //==================color==================
-
+@discardableResult
 public func CRColorPattern(name: String) -> UIColor {
     return UIColor(patternImage: CRImageFiled(name: name) ?? UIImage())
 }
 
 // r, g, b range from 0 - 1.0
+@discardableResult
 public func CRRGBA(r: Float, g: Float, b: Float, a: Float) -> UIColor {
     return UIColor(red: CGFloat(r / 255.0), green: CGFloat(g / 255.0), blue: CGFloat(b / 255), alpha: CGFloat(a))
 }
 
+@discardableResult
 public func CRRGB(r: Float, g: Float, b: Float, a: Float) -> UIColor {
     return CRRGBA(r: r, g: g, b: b, a: 1.0)
 }
 
 // rgbValue is a Hex vaule without prefix 0x
+@discardableResult
 public func CRRGBA_X(rgb: Int, a: Float = 1) -> UIColor {
     return CRRGBA(r: Float((rgb & 0xFF0000) >> 16), g: Float((rgb & 0xFF00) >> 8), b: (Float(rgb & 0xFF)), a: a)
 }
-
 
 // MARK: - execution time
 
