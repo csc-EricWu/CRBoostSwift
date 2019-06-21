@@ -172,7 +172,7 @@ public func CRUserBOOL(key: String) -> Bool {
 }
 
 @discardableResult
-public func CRUserObj(key: String) -> String? {
+public func CRUserString(key: String) -> String? {
     return CRUserDefaults.string(forKey: key)
 }
 

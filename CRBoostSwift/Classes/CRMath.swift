@@ -451,12 +451,12 @@ public func CRTimestamp() -> Int64 {
 }
 
 @discardableResult
-public func CRJSONIsArray(json: AnyObject?) -> Bool {
+public func CRJSONIsArray(json: Any?) -> Bool {
     return json is [Any]
 }
 
 @discardableResult
-public func CRJSONIsDictionary(json: AnyObject?) -> Bool {
+public func CRJSONIsDictionary(json: Any?) -> Bool {
     return json is Dictionary<String, Any>
 }
 

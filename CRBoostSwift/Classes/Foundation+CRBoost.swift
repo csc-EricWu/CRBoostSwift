@@ -69,4 +69,19 @@ extension String {
             return self
         }
     }
+
+    @discardableResult
+    public func phoneNumberFormat() -> String {
+        if count == 11 {
+            var formatPhone = self
+            for (idx, _) in enumerated() {
+                if idx == 2 || idx == 7 {
+                    let index = formatPhone.index(formatPhone.startIndex, offsetBy: idx + 1)
+                    formatPhone.insert(" ", at: index)
+                }
+            }
+            return formatPhone
+        }
+        return self
+    }
 }
