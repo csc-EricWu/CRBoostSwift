@@ -394,12 +394,71 @@ public func CRJSONIsDictionary(json: AnyObject?) -> Bool {
     return json is Dictionary<String, Any>
 }
 
+// MARK: - match
+
+public func CRMatches(pattern: String, text: String?) -> [NSTextCheckingResult]? {
+    guard let string = text else { return nil }
+    if string.count <= 0 {
+        return nil
+    }
+    if let regex = try? NSRegularExpression(pattern: pattern, options: .caseInsensitive) {
+        return regex.matches(in: string, options: [], range: NSRange(location: 0, length: string.count))
+    }
+    return nil
+}
+
+public func CRMatch(pattern: String, text: String?) -> NSTextCheckingResult? {
+    return CRMatches(pattern: pattern, text: text)?.first
+}
+
+public func CRIsMatch(pattern: String, text: String?) -> Bool {
+    if CRIsNullOrEmpty(text: text as AnyObject?) {
+        return false
+    }
+    if CRIsNullOrEmpty(text: pattern as AnyObject) {
+        return true
+    }
+    if CRMatch(pattern: pattern, text: text) == nil {
+        return false
+    }
+    return true
+}
+
+public func CRIsEmail(text: String?) -> Bool {
+    let pattern = "^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$"
+    return CRIsMatch(pattern: pattern, text: text)
+}
+
+/**
+ * 判断字符串是否符合手机号码格式
+ * 移动号段: 134,135,136,137,138,139,147,150,151,152,157,158,159,170,178,182,183,184,187,188
+ * 联通号段: 130,131,132,145,155,156,170,171,175,176,185,186
+ * 电信号段: 133,149,153,170,173,177,180,181,189
+ * @param text 待检测的字符串
+ * @return 待检测的字符串
+ */
+public func CRIsPhoneNumber(text: String?) -> Bool {
+    let pattern = "^[1][3-9][0-9]{9}$"
+    return CRIsMatch(pattern: pattern, text: text)
+}
+
+public func CRIsInteger(text: String?) -> Bool {
+    let pattern = "^\\d+$"
+    return CRIsMatch(pattern: pattern, text: text)
+}
+
+public func CRIsURL(text: String?) -> Bool {
+    // (https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]
+    let pattern = "(https?)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]"
+    return CRIsMatch(pattern: pattern, text: text)
+}
+
 public func CRIsNullOrEmpty(text: AnyObject?) -> Bool {
     if text is NSNull {
         return true
     }
     if let string: String = text as? String {
-        guard !string.isEmpty && string != "(null)" && string != "<null>"  else {
+        guard !string.isEmpty && string != "(null)" && string != "<null>" else {
             return true
         }
     }

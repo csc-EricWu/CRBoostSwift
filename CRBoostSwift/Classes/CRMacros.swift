@@ -255,13 +255,10 @@ public func CRRGB(r: Float, g: Float, b: Float, a: Float) -> UIColor {
 }
 
 // rgbValue is a Hex vaule without prefix 0x
-public func CRRGBA_X(rgb: Int, a: Float) -> UIColor {
+public func CRRGBA_X(rgb: Int, a: Float = 1) -> UIColor {
     return CRRGBA(r: Float((rgb & 0xFF0000) >> 16), g: Float((rgb & 0xFF00) >> 8), b: (Float(rgb & 0xFF)), a: a)
 }
 
-public func CRRGB_X(rgb: Int) -> UIColor {
-    return CRRGBA_X(rgb: rgb, a: 1)
-}
 
 // MARK: - execution time
 
