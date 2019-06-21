@@ -149,7 +149,7 @@ public func CRScreenBounds(landscape: Bool) -> CGRect {
 }
 
 public func CRScreenIsLandscape() -> Bool {
-    return UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation)
+    return UIInterfaceOrientation.landscapeLeft.isLandscape
     // UIDeviceOrientationIsLandscape(CRCurrentDevice.orientation);
 }
 
@@ -250,7 +250,7 @@ public func CRTopViewController(controller: UIViewController = CRRootViewControl
         let navigation = controller as! UINavigationController
         return CRTopViewController(controller: navigation.visibleViewController!)
     } else {
-        for childCtrl in controller.childViewControllers {
+        for childCtrl in controller.children {
             if childCtrl.view.window != nil {
                 return childCtrl
             }
@@ -395,11 +395,11 @@ public func CRJSONIsDictionary(json: AnyObject?) -> Bool {
 }
 
 public func CRIsNullOrEmpty(text: AnyObject?) -> Bool {
-    if text is NSNull || text == nil || text!.isEmpty {
+    if text is NSNull {
         return true
     }
     if let string: String = text as? String {
-        if string == "(null)" || string == "<null>" {
+        guard !string.isEmpty && string != "(null)" && string != "<null>"  else {
             return true
         }
     }

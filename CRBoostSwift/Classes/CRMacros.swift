@@ -122,7 +122,7 @@ public let IS_IOS12 = (kSystemVersion >= Float(12.0) && kSystemVersion <= Float(
 public let IS_IOS13 = (kSystemVersion >= Float(13.0) && kSystemVersion <= Float(14.0))
 
 // application status
-public let CRAPP_IN_BACKGROUND = UIApplication.shared.applicationState == UIApplicationState.background
+public let CRAPP_IN_BACKGROUND = UIApplication.shared.applicationState == UIApplication.State.background
 public func CRDisableAppIdleTimer(flag: Bool) {
     UIApplication.shared.isIdleTimerDisabled = flag
 }
