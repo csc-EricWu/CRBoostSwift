@@ -25,7 +25,8 @@ class ViewController: UIViewController {
         print("Hello word!".joinUrl(url: "333"))
         print("Hello word!".joinUrl(url: "/333"))
         print("Hello word!/".joinUrl(url: "333"))
-        CRIsNullOrEmpty(text: "")
-
+        print(CRIsNullOrEmpty(text: ""))
+        let str:String? = "111"
+        print("hello :\(str)")
     }
 }

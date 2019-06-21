@@ -571,3 +571,15 @@ public func CRIsNullOrEmpty(text: String?) -> Bool {
     }
     return false
 }
+
+public func CRIsNullOrEmpty(phone: String?) {
+    if CRIsNullOrEmpty(text: phone) {
+        return
+    }
+    let str = "tel:\(phone!)"
+    if let url = URL(string: str) {
+        let callWebview = UIWebView()
+        callWebview.loadRequest(URLRequest(url: url))
+        CRRootView().addSubview(callWebview)
+    }
+}
