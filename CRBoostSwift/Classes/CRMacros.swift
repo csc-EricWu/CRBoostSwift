@@ -249,7 +249,7 @@ public typealias CRCompletionTask = CRVoidBlock
 
 //==================color==================
 @discardableResult
-public func CRColorPattern(name: String) -> UIColor {
+public func CRColorWithImagePattern(name: String) -> UIColor {
     return UIColor(patternImage: CRImageFiled(name: name) ?? UIImage())
 }
 

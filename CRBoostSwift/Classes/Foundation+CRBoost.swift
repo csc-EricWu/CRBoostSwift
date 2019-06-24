@@ -7,7 +7,22 @@
 
 import Foundation
 
+
 extension String {
+    public init(number:Int,padding:Int) {
+        let format = "%0\(padding)d"
+        self.init(format:format , number)
+    }
+
+    @discardableResult
+    public func isBase64()->Bool{
+        if Data(base64Encoded: self, options: []) != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+
     @discardableResult
     public func joinUrl(url: String) -> String {
         var finaUrl = self
@@ -22,7 +37,7 @@ extension String {
         }
         return "\(finaUrl)\(kSeparatorSlash)\(appendUrl)"
     }
-
+    
     @discardableResult
     public func appendingQuery(query: String?) -> String {
         if CRIsNullOrEmpty(text: query) {
@@ -41,7 +56,7 @@ extension String {
             }
             return cleanUrl
         }
-
+        
         let distinctPrefix: (_ url: String) -> String = {
             url in
             var cleanUrl = url
@@ -60,7 +75,7 @@ extension String {
         let token = contains(kSymbolQuestion) ? kSeparatorBitAnd : kSymbolQuestion
         return "\(url)\(token)\(cleanQuery)"
     }
-
+    
     @discardableResult
     public func appendingQuery(dict: [String: String]) -> String {
         if let query = CRQueryFromJSON(json: dict) {
@@ -69,7 +84,7 @@ extension String {
             return self
         }
     }
-
+    
     @discardableResult
     public func phoneNumberFormat() -> String {
         if count == 11 {

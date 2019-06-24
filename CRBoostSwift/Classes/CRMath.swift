@@ -284,7 +284,7 @@ public func CRPopToViewController(navigation: UINavigationController?, controlle
 @discardableResult
 public func CRTopViewController(controller: UIViewController = CRRootViewController()) -> UIViewController? {
     if controller.presentedViewController != nil {
-        return CRTopViewController(controller: controller)
+        return CRTopViewController(controller: controller.presentedViewController!)
     } else if controller.isKind(of: UITabBarController.self) {
         let tabBar = controller as! UITabBarController
         return CRTopViewController(controller: tabBar.selectedViewController!)
@@ -362,7 +362,7 @@ public func CRPresentView(view: UIView, animated: Bool) {
         CRRootView().addSubview(view)
     }
 }
-
+@discardableResult
 public func CRPresentAlert(title: String?, msg: String, handler: AlertAction? = nil, canel: String, action: String...) -> UIAlertController {
     let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
     if !canel.isEmpty {
