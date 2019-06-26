@@ -190,3 +190,31 @@ extension String {
         return self
     }
 }
+extension URL {
+    @discardableResult
+    public func absoluteStringByTrimmingQuery() -> String?
+    {
+        if var components = (URLComponents(url: self, resolvingAgainstBaseURL: false)) {
+            components.query = nil
+            return components.string
+        }
+        return self.absoluteString
+    }
+    
+    @discardableResult
+    public func URLByAppendingQueryString(query:String?) -> URL?
+    {
+        if let queryString = query {
+            let separator = CRIsNullOrEmpty(text: self.query) ? "?" : "&"
+            let URLString = "\(self.absoluteString)\(separator)\(queryString)"
+            if let fullURL = URL(string: URLString) {
+                return fullURL
+            }
+        }
+        return self
+        
+    }
+   
+}
+
+
