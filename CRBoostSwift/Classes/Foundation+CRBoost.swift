@@ -6,14 +6,104 @@
 //
 
 import Foundation
-
+import var CommonCrypto.CC_MD5_DIGEST_LENGTH
+import func CommonCrypto.CC_MD5
+import typealias CommonCrypto.CC_LONG
 
 extension String {
     public init(number:Int,padding:Int) {
         let format = "%0\(padding)d"
         self.init(format:format , number)
     }
-
+    
+    @discardableResult
+    public func pathByAppendingFlag(flag:String)->String
+    {
+        let path = self as NSString
+        let ext = path.pathExtension
+        let pathBody = path.deletingPathExtension
+        let newPath = "\(pathBody)\(flag).\(ext)"
+        return newPath;
+    }
+    @discardableResult
+    public func join(path:String?)->String
+    {
+        guard let appendPath = path else { return self  }
+        let finalPath = self as NSString
+        return finalPath.appending(appendPath)
+    }
+    @discardableResult
+    public func joinExt(ext:String?)->String
+    {
+        guard let appendExt = ext else { return self  }
+        let finalPath = self as NSString
+        return finalPath.appendingPathExtension(appendExt) ?? kEmptyString
+    }
+    @discardableResult
+    public func joinPath(path:String?)->String
+    {
+        guard let appendPath = path else { return self  }
+        let finalPath = self as NSString
+        return finalPath.appendingPathComponent(appendPath)
+    }
+    @discardableResult
+    public func sizeWithFont(font:UIFont?,maxSize:CGSize)->CGSize
+    {
+        let text = self as NSString
+        if font != nil {
+            let   attrs = [NSAttributedString.Key.font:font!]
+            let rect =  text.boundingRect(with: maxSize, options: .usesLineFragmentOrigin, attributes: attrs, context: nil)
+            return rect.size
+        }
+        return CGSize.zero
+    }
+    @discardableResult
+    public func widthWithFont(font:UIFont?)->CGFloat
+    {
+        return self .sizeWithFont(font: font, maxSize: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)).width
+    }
+    @discardableResult
+    public func heightForFont(font:UIFont?,width :CGFloat)->CGFloat
+    {
+        return self .sizeWithFont(font: font, maxSize: CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)).height
+    }
+    @discardableResult
+    func md5String(string: String) -> String {
+        let length = Int(CC_MD5_DIGEST_LENGTH)
+        let messageData = string.data(using:.utf8)!
+        var digestData = Data(count: length)
+        _ = digestData.withUnsafeMutableBytes { digestBytes -> UInt8 in
+            messageData.withUnsafeBytes { messageBytes -> UInt8 in
+                if let messageBytesBaseAddress = messageBytes.baseAddress, let digestBytesBlindMemory = digestBytes.bindMemory(to: UInt8.self).baseAddress {
+                    let messageLength = CC_LONG(messageData.count)
+                    CC_MD5(messageBytesBaseAddress, messageLength, digestBytesBlindMemory)
+                }
+                return 0
+            }
+        }
+        let md5Hex =  digestData.map { String(format: "%02hhx", $0) }.joined()
+        return md5Hex
+    }
+    @discardableResult
+    func removeDecimalLastZeros ()->String{
+        var result = self
+        while result.contains(".") && result.hasSuffix("0") {
+            let index = result.index(result.endIndex, offsetBy: -1)
+            result = String(result[..<index])
+        }
+        if result.hasSuffix(".") {
+            let index = result.index(result.endIndex, offsetBy: -1)
+            result = String(result[..<index])
+        }
+        return result
+    }
+    @discardableResult
+    func randomStringLength (len:Int)->String{
+        
+        let randomCharacters = (0..<len).map{_ in self.randomElement()!}
+        let randomString = String(randomCharacters)
+        return randomString
+    }
     @discardableResult
     public func isBase64()->Bool{
         if Data(base64Encoded: self, options: []) != nil {
@@ -22,7 +112,7 @@ extension String {
             return false
         }
     }
-
+    
     @discardableResult
     public func joinUrl(url: String) -> String {
         var finaUrl = self
