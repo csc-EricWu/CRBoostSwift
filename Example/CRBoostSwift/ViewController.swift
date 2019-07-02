@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         print("Hello word!".joinUrl(url: "/333"))
         print("Hello word!/".joinUrl(url: "333"))
         print(String(number:10,padding:10))
-        print("c2RzZHNkc2Q8".isBase64())
+        print("c2RzZHNkce2Q8".isBase64())
+        print(CRIsNullOrEmpty(text: nil))
     }
 }

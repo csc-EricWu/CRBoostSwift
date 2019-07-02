@@ -192,7 +192,7 @@ extension String {
 }
 extension URL {
     @discardableResult
-    public func absoluteStringByTrimmingQuery() -> String?
+    public func trimmingQuery() -> String?
     {
         if var components = (URLComponents(url: self, resolvingAgainstBaseURL: false)) {
             components.query = nil
@@ -202,7 +202,7 @@ extension URL {
     }
     
     @discardableResult
-    public func URLByAppendingQueryString(query:String?) -> URL?
+    public func appendingQueryString(query:String?) -> URL?
     {
         if let queryString = query {
             let separator = CRIsNullOrEmpty(text: self.query) ? "?" : "&"
@@ -214,7 +214,78 @@ extension URL {
         return self
         
     }
-   
+    
+}
+extension Date
+{
+    @discardableResult
+  public  static func timeIntervalSince1970Number(number:TimeInterval) ->Date
+    {
+        var timeInterval = number
+        if timeInterval > 140000000000 {
+            timeInterval = timeInterval / 1000
+        }
+        return Date(timeIntervalSince1970: timeInterval)
+    }
+    
+    @discardableResult
+    public static func dateWithString(string:String?,template:String?)-> Date?
+    {
+        if CRIsNullOrEmpty(text: string) || CRIsNullOrEmpty(text: template) {
+            return nil
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.dateFormat = template
+        return dateFormatter.date(from: string!)
+    }
+    
+    @discardableResult
+    public  func stringWithTemplate(template:String?)-> String?
+    {
+        if  CRIsNullOrEmpty(text: template) {
+            return nil
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.dateFormat = template
+        return dateFormatter.string(from: self)
+    }
+    @discardableResult
+    public func isSameDay(date:Date) -> Bool
+    {
+        let calendar = Calendar.current
+        let comp1 = calendar.dateComponents(Set(CRCOMPS_DATE), from: self)
+        let comp2 = calendar.dateComponents(Set(CRCOMPS_DATE), from: date)
+        return comp1.year == comp2.year && comp1.month == comp2.month && comp1.day == comp2.day
+     }
+
+}
+extension NSAttributedString
+{
+    @discardableResult
+    public func sizeThatFits(size:CGSize)->CGSize
+    {
+        let rect = self .boundingRect(with: size, options: [.usesLineFragmentOrigin,.usesFontLeading], context: nil)
+      
+            return rect.size
+       
+    }
+    @discardableResult
+    public func widthToFit()->CGFloat
+    {
+        let size = self.sizeThatFits(size: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude))
+        return size.width
+    }
+    @discardableResult
+    public func heightForWidth(width :CGFloat)->CGFloat
+    {
+        let size = self.sizeThatFits(size: CGSize(width: width, height: CGFloat.greatestFiniteMagnitude))
+        return size.height
+    }
 }
 
-
+//extension UIImage {
+//    @discardableResult
+//    public func
+//}

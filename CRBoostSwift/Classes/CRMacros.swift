@@ -16,8 +16,8 @@ import Foundation
 public let CRNull = NSNull()
 
 //==================date==================
-public let CRCOMPS_DATE: NSCalendar.Unit = [NSCalendar.Unit.year, NSCalendar.Unit.month, NSCalendar.Unit.day]
-public let CRCOMPS_TIME: NSCalendar.Unit = [NSCalendar.Unit.hour, NSCalendar.Unit.minute, NSCalendar.Unit.second]
+public let CRCOMPS_DATE: [Calendar.Component] = [.year, .month, .day]
+public let CRCOMPS_TIME: [Calendar.Component] = [.hour, .minute, .second]
 
 // MARK: - Default
 

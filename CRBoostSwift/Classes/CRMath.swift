@@ -362,6 +362,7 @@ public func CRPresentView(view: UIView, animated: Bool) {
         CRRootView().addSubview(view)
     }
 }
+
 @discardableResult
 public func CRPresentAlert(title: String?, msg: String, handler: AlertAction? = nil, canel: String, action: String...) -> UIAlertController {
     let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
@@ -568,11 +569,11 @@ public func CRIsNullOrEmpty(text: String?) -> Bool {
         guard !string.isEmpty && string != "(null)" && string != "<null>" else {
             return true
         }
-    }
+    } else { return true}
     return false
 }
 
-public func CRIsNullOrEmpty(phone: String?) {
+public func CRCallPhoneNumber(phone: String?) {
     if CRIsNullOrEmpty(text: phone) {
         return
     }
