@@ -32,7 +32,8 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'CRBoostSwift/Classes/*.{swift}'
-  
+  #s.xcconfig     = {'OTHER_LDFLAGS' => '-ObjC'}
+
   # s.resource_bundles = {
   #   'CRBoostSwift' => ['CRBoostSwift/Assets/*.png']
   # }
