@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("Hello word!/".joinUrl(url: "/333"))
-        print("Hello word!".joinUrl(url: "333"))
+           print("Hello word!/".joinUrl(url: "/333"))
+           print("Hello word!".joinUrl(url: "333"))
         print("Hello word!".joinUrl(url: "/333"))
         print("Hello word!/".joinUrl(url: "333"))
         print(String(number:10,padding:10))

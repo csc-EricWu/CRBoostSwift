@@ -418,8 +418,7 @@ public func CRRunOnMainThread(task: @escaping CRVoidBlock) {
 @discardableResult
 public func CRJSONFromPath(path: String) -> Any? {
     if let jsonData = NSData(contentsOfFile: path) {
-        if let json = try? JSONSerialization.jsonObject(with: jsonData as Data, options: .allowFragments)
-        { return json }
+        if let json = try? JSONSerialization.jsonObject(with: jsonData as Data, options: .allowFragments) { return json }
     }
     return nil
 }
@@ -428,8 +427,7 @@ public func CRJSONFromPath(path: String) -> Any? {
 public func CRJSONFromString(string: String?) -> Any? {
     if let text = string {
         if let jsonData = text.data(using: .utf8) {
-            if let json = try? JSONSerialization.jsonObject(with: jsonData as Data, options: .allowFragments)
-            { return json }
+            if let json = try? JSONSerialization.jsonObject(with: jsonData as Data, options: .allowFragments) { return json }
         }
     }
     return nil

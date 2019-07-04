@@ -8,8 +8,8 @@
 
 import UIKit
 
-#if  DEBUG
-import DoraemonKit
+#if DEBUG
+//    import DoraemonKit
 
 #endif
 
@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         #if DEBUG
-         DoraemonManager.shareInstance().install()
+//         DoraemonManager.shareInstance().install()
         #endif
         return true
     }

@@ -14,8 +14,10 @@
     "git": "https://github.com/csc-EricWu/CRBoostSwift.git",
     "tag": "0.1.0"
   },
+  "swift_versions": "5.0",
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "CRBoostSwift/Classes/*.{swift}"
+  "source_files": "CRBoostSwift/Classes/*.{swift}",
+  "swift_version": "5.0"
 }

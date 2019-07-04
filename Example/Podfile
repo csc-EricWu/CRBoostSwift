@@ -2,7 +2,8 @@ use_frameworks!
 
 target 'CRBoostSwift_Example' do
   pod 'CRBoostSwift', :path => '../'
-  pod 'DoraemonKit', '~> 1.2.0', :subspecs => ['Core'], :configurations => ['Debug']
+#  pod 'DoraemonKit', '~> 1.2.0', :subspecs => ['Core'], :configurations => ['Debug']
+#  pod 'SwiftLint'
 
   target 'CRBoostSwift_Tests' do
     inherit! :search_paths
