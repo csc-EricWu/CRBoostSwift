@@ -207,6 +207,30 @@ extension URL {
     }
 
 }
+
+/**
+ * date formatter
+ *
+ * date format
+ * 0: no separator
+ * 1: use '/' as separator
+ * 2: use '-' as separator
+ *
+ * time format
+ * 0: use ':' as separator
+ */
+public let kDateTemplate0yyyyMMdd = "yyyyMMdd"
+public let kDateTemplate0hmma = "h:mm a"
+
+public let kDateTemplate1MMddyyyy = "MM/dd/yyyy"
+public let kDateTemplate1MMddyy = "MM/dd/yy"
+public let kDateTemplate1ddMMyyyy0HHmmss = "dd/MM/yyyy HH:mm:ss"
+public let kDateTemplate1ddMMyyyy0HHmm = "dd/MM/yyyy HH:mm"
+
+public let kDateTemplate2MMddyyyy = "MM-dd-yyyy"
+public let kDateTemplate2yyyyMMdd0HHmmss = "yyyy-MM-dd HH:mm:ss"
+public let kDateTemplate2yyyyMMdd0HHmmssZZZ = "yyyy-MM-dd HH:mm:ss ZZZ"
+
 extension Date {
 
     /// Year component
