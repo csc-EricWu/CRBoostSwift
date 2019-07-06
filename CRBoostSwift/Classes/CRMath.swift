@@ -434,7 +434,7 @@ public func CRJSONFromString(string: String?) -> Any? {
 }
 
 @discardableResult
-public func CRJSONToString(obj: Any) -> String? {
+public func CRJSONToString(_ obj: Any) -> String? {
     if let data = try? JSONSerialization.data(withJSONObject: obj, options: []) {
         if let json = String(data: data, encoding: .utf8) {
             return json

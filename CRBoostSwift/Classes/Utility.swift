@@ -92,24 +92,38 @@ public class Utility {
     // MARK: - View
 
     public class func presentView(view: UIView, animated: Bool) {
+        let root = CRRootView()
+        view.alpha = 0.001
+        root.addSubview(view)
+        let duration = animated ? 0.3 : 0
+        UIView.animate(withDuration: duration, delay: 0, options: [], animations: {
+            view.alpha = 1
+        }, completion: nil)
     }
 
-//    + (void)presentView:(UIView *)view animated:(BOOL)animated
-//    {
-//    UIViewController *root = CRRootViewController();
-//    if (animated)
-//    {
-//    view.alpha = 0;
-//    [root.view addSubview:view];
-//    [UIView animateWithDuration:0.3 delay:0 options:0 animations:^{
-//    view.alpha = 1;
-//    } completion:nil];
-//    }
-//    else
-//    {
-//    [root.view addSubview:view];
-//    }
-//    }
+    // MARK: - storyboard
+    public class func controllerInStoryboard( storyboard: String, identifier: String) -> UIViewController {
+        let ontroller = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(withIdentifier: identifier)
+        return ontroller
+    }
+    // MARK: - goUrl
+    public class func goStringUrl(_ str: String?) {
 
-    // MARK: - interaction
+        guard var trimStr = str else { return }
+        trimStr = trimStr.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
+        goURL(URL(string: trimStr))
+    }
+
+    public class func goURL(_ url: URL?) {
+        guard let trimUrl = url else { return}
+        if UIApplication.shared.canOpenURL(trimUrl) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(trimUrl, options: [:]) { (_) in
+
+                }
+            } else {
+                UIApplication.shared.openURL(trimUrl)
+            }
+        }
+    }
 }

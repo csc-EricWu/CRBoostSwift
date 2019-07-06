@@ -491,7 +491,101 @@ extension NSAttributedString {
     }
 }
 
-//extension UIImage {
-//    @discardableResult
-//    public func
-//}
+extension UIImage {
+    @discardableResult
+    public func scaleToSize(size: CGSize) -> UIImage? {
+        if size.width <= 0 || size.height <= 0 {
+            return nil
+        }
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+
+    @discardableResult
+    public func imageByApplyingAlpha(alpha: CGFloat) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.size, false, 0.0)
+        guard let ctx = UIGraphicsGetCurrentContext() else { return nil }
+        ctx.scaleBy(x: 1, y: -1)
+        ctx.translateBy(x: 0, y: -self.size.height)
+        ctx.setBlendMode(.multiply)
+        ctx.setAlpha(alpha)
+        ctx.draw(self.cgImage!, in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+
+    }
+
+    @discardableResult
+    public func resizeWithImageMode(_ resizingMode: UIImage.ResizingMode = .stretch) -> UIImage {
+        let top = self.size.height / 2.0
+        let left = self.size.width / 2.0
+        let bottom = self.size.height / 2.0
+        let right = self.size.width / 2.0
+        return resizableImage(withCapInsets: UIEdgeInsets(top: top, left: left, bottom: bottom, right: right), resizingMode: resizingMode)
+    }
+    @discardableResult
+
+    public class func imageFromeView(_ view: UIView) -> UIImage? {
+        return imageFromeView(view, size: view.bounds.size)
+    }
+    @discardableResult
+
+    public class func imageFromeView(_ view: UIView, size: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, view.isOpaque, 0)
+        view.drawHierarchy(in: view.bounds, afterScreenUpdates: false)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    @discardableResult
+
+    public class func imageWithColor(_ color: UIColor, size: CGSize) -> UIImage? {
+        let rect = CGRect(origin: CGPoint.zero, size: size)
+        UIGraphicsBeginImageContext(size)
+        guard let ctx = UIGraphicsGetCurrentContext() else { return nil }
+        ctx.setFillColor(color.cgColor)
+        ctx.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    @discardableResult
+    public class func imageSizeWithURL(_ url: String?) -> CGSize {
+        guard let urlStr = url else {
+            return CGSize.zero
+        }
+        //https://github.com/mattneub/Programming-iOS-Book-Examples/blob/master/bk2ch23p829imageIO/ch36p1084imageIO/ViewController.swift
+        var width: CGFloat = 0
+        var height: CGFloat = 0
+        if let trimUrl = URL(string: urlStr) {
+            let imageSourceRef = CGImageSourceCreateWithURL(trimUrl as CFURL, nil)
+            if let imageSRef = imageSourceRef {
+                let imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSRef, 0, nil)
+                if let imageP = imageProperties {
+                    let imageDict = imageP as Dictionary
+                    width = imageDict[kCGImagePropertyPixelWidth] as! CGFloat
+                    height = imageDict[kCGImagePropertyPixelHeight] as! CGFloat
+                }
+            }
+        }
+        return CGSize(width: width, height: height)
+    }
+}
+
+extension UIColor {
+    public class func randomColor() -> UIColor {
+        let red = arc4random_uniform(256)
+        let green = arc4random_uniform(256)
+        let blue = arc4random_uniform(256)
+        return CRRGBA(r: Float(red), g: Float(green), b: Float(blue))
+    }
+    
+    // MARK: - color from {R, G, B}
+    public class func colorWithString(string:String) -> UIColor {
+        return UIColor()
+    }
+}

@@ -255,13 +255,8 @@ public func CRColorWithImagePattern(name: String) -> UIColor {
 
 // r, g, b range from 0 - 1.0
 @discardableResult
-public func CRRGBA(r: Float, g: Float, b: Float, a: Float) -> UIColor {
+public func CRRGBA(r: Float, g: Float, b: Float, a: Float = 1) -> UIColor {
     return UIColor(red: CGFloat(r / 255.0), green: CGFloat(g / 255.0), blue: CGFloat(b / 255), alpha: CGFloat(a))
-}
-
-@discardableResult
-public func CRRGB(r: Float, g: Float, b: Float, a: Float) -> UIColor {
-    return CRRGBA(r: r, g: g, b: b, a: 1.0)
 }
 
 // rgbValue is a Hex vaule without prefix 0x
