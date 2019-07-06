@@ -574,6 +574,25 @@ extension UIImage {
         }
         return CGSize(width: width, height: height)
     }
+    @discardableResult
+    public class func qrImageWithString(_ codeStr: String?) -> UIImage? {
+        if CRIsNullOrEmpty(text: codeStr) {
+            return nil
+        }
+        guard let filter = CIFilter(name: "CIQRCodeGenerator") else { return nil }
+        // 滤镜恢复默认设置
+        filter.setDefaults()
+        // 2. 给滤镜添加数据
+        let data =  codeStr!.data(using: String.Encoding.utf8)
+        filter.setValue(data, forKey: "inputMessage")
+        // 3. 生成高清二维码
+        let image = filter.outputImage
+        let transform = CGAffineTransform(scaleX: 5.0, y: 5.0)
+        guard let output = image?.transformed(by: transform) else { return nil }
+        // 4. 显示二维码
+        let newImage = UIImage(ciImage: output, scale: UIScreen.main.scale, orientation: UIImage.Orientation.up)
+        return newImage
+    }
 }
 
 extension UIColor {
@@ -583,9 +602,9 @@ extension UIColor {
         let blue = arc4random_uniform(256)
         return CRRGBA(r: Float(red), g: Float(green), b: Float(blue))
     }
-    
+
     // MARK: - color from {R, G, B}
-    public class func colorWithString(string:String) -> UIColor {
+    public class func colorWithString(string: String) -> UIColor {
         return UIColor()
     }
 }
