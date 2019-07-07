@@ -198,7 +198,36 @@ extension UIView {
         }
         return nil
     }
-
+    @discardableResult
+    public func viewController<T>() -> T? where T: UIViewController {
+        var view: UIView? = self
+        while view != nil {
+            if let nextResponder = view?.next, nextResponder.isKind(of: UIViewController.self) {
+                return nextResponder as? T
+            }
+            view = view?.superview
+        }
+        return nil
+    }
+    // MARK: - snapshot
+    @discardableResult
+    public func snapshotImage() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, self.isOpaque, 0)
+        if let ctx =  UIGraphicsGetCurrentContext() {
+            self.layer.render(in: ctx)
+        }
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    @discardableResult
+    public func snapshotImageAfterScreenUpdates(afterUpdates: Bool) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, self.isOpaque, 0)
+        self.drawHierarchy(in: bounds, afterScreenUpdates: afterUpdates)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
     // MARK: - animation
 
     public func pulsateOnce() {
@@ -279,5 +308,19 @@ extension UIView {
         addGestureRecognizer(gesture)
         config?(gesture)
         return gesture
+    }
+}
+
+extension CALayer {
+    // MARK: - snapshot
+    @discardableResult
+    public func snapshotImage() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, 0)
+        if let ctx =  UIGraphicsGetCurrentContext() {
+            render(in: ctx)
+        }
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
     }
 }
