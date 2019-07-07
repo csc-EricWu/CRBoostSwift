@@ -163,7 +163,7 @@ extension UIView {
     }
 
     @discardableResult
-    public class func loadFramNib<T>(nibName: String) -> T where T: UIView {
+    public class func loadFromNib<T>(nibName: String) -> T where T: UIView {
         let nib = Bundle.main.loadNibNamed(nibName, owner: self, options: [:])
         let view = nib![0]
         return view as! T
