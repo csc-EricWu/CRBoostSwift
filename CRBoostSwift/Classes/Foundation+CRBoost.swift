@@ -607,4 +607,5 @@ extension UIColor {
     public class func colorWithString(string: String) -> UIColor {
         return UIColor()
     }
+    
 }

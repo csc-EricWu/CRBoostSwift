@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		03BCC38E7ADC095E4289F90168491661 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		042225C894348096A5C6322909950969 /* Pods-CRBoostSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EEEB944AED188763299FD1EA279F72 /* Pods-CRBoostSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0729118F22D1A1C5003BA919 /* UIKit+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729118E22D1A1C5003BA919 /* UIKit+CRBoost.swift */; };
 		2BB68D4D231EB466461E312C91EE88A1 /* CRMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B272E14605673FF0063605E34EE9388 /* CRMacros.swift */; };
 		3875807BC8B2CB3C6D4048E1DF53CB65 /* CRBoostSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB80AC7587CA03E73121DB727EB76FCC /* CRBoostSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39DB19B13B5220ADD9682C6701DEEA9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -40,10 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0729118E22D1A1C5003BA919 /* UIKit+CRBoost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIKit+CRBoost.swift"; path = "CRBoostSwift/Classes/UIKit+CRBoost.swift"; sourceTree = "<group>"; };
 		0C5830577A4FEE048197651E392AFD51 /* Pods-CRBoostSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Tests-Info.plist"; sourceTree = "<group>"; };
 		0E65148A5D6124F59250860AC659F543 /* Pods-CRBoostSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CRBoostSwift_Example.modulemap"; sourceTree = "<group>"; };
 		11BFB992D1C4CE334E0ED96EDD33768B /* Pods-CRBoostSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CRBoostSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CRBoostSwift.framework; path = CRBoostSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CRBoostSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEA8EEBB87497915E18A08ABB939E36 /* Pods-CRBoostSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		288DBA6C67A06B33357FA91813702236 /* CRMath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CRMath.swift; path = CRBoostSwift/Classes/CRMath.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -52,10 +54,10 @@
 		39EEEB944AED188763299FD1EA279F72 /* Pods-CRBoostSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CRBoostSwift_Example-umbrella.h"; sourceTree = "<group>"; };
 		3E600537D040F3E700606AC3D0F03C2E /* CRBoostSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CRBoostSwift.modulemap; sourceTree = "<group>"; };
 		486EFFA80A7B837BCC5EB8BFBB64B6E4 /* CRBoostSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRBoostSwift.xcconfig; sourceTree = "<group>"; };
-		54B76B7944D94043EA162E695B4E0DC6 /* Pods_CRBoostSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CRBoostSwift_Tests.framework; path = "Pods-CRBoostSwift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B76B7944D94043EA162E695B4E0DC6 /* Pods_CRBoostSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRBoostSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1EF87582AEEF166DD24597F10D1D73 /* Pods-CRBoostSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CRBoostSwift_Tests.modulemap"; sourceTree = "<group>"; };
 		5E5976BA8F3049A902DD93C889B65806 /* Pods-CRBoostSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRBoostSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
-		6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods_CRBoostSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CRBoostSwift_Example.framework; path = "Pods-CRBoostSwift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods_CRBoostSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRBoostSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B2AE305E5D2610F55D9EA156C2D77BE /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = CRBoostSwift/Classes/Utility.swift; sourceTree = "<group>"; };
 		6C342FFEACB7AA5C92C2931ED78618C1 /* Pods-CRBoostSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CRBoostSwift_Tests-dummy.m"; sourceTree = "<group>"; };
 		8A4ACAF10044F79305EB498FD3B35FDF /* CRBoostSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoostSwift-prefix.pch"; sourceTree = "<group>"; };
@@ -63,17 +65,17 @@
 		8CD8751E529B3AD5920B0A8486EBD307 /* CRBoostSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRBoostSwift-dummy.m"; sourceTree = "<group>"; };
 		92AB99E96EC6DC4A28DEC4E2D9F739F1 /* Pods-CRBoostSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9BB787976720B6D04F697F0CA0F56EA7 /* Pods-CRBoostSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CRBoostSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A39955180D8395AD5FD6EABF4546A063 /* Pods-CRBoostSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A41993E23E78BB1A15D0D2D3458D6B1F /* CRBoostSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CRBoostSwift-Info.plist"; sourceTree = "<group>"; };
 		A5DE7B9CA59FE3A8AF98AB6C70CDB719 /* Pods-CRBoostSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Example-Info.plist"; sourceTree = "<group>"; };
 		AB80AC7587CA03E73121DB727EB76FCC /* CRBoostSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoostSwift-umbrella.h"; sourceTree = "<group>"; };
 		B73A747F630EC7126F30B01388E148CC /* Foundation+CRBoost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Foundation+CRBoost.swift"; path = "CRBoostSwift/Classes/Foundation+CRBoost.swift"; sourceTree = "<group>"; };
-		BFC0E7A7415240D2C5BE07730E752A26 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		BFC0E7A7415240D2C5BE07730E752A26 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D0CF78625C39452597D05AC1300C8C90 /* Pods-CRBoostSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D87F0379C21EE107A078BAB1E5BC9835 /* Pods-CRBoostSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CRBoostSwift_Example-dummy.m"; sourceTree = "<group>"; };
 		E8C332191AE7505F9400FCAAFCB98959 /* Pods-CRBoostSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CRBoostSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F6E6951B0F76F1240C384120968D2B04 /* CRBoostSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CRBoostSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F6E6951B0F76F1240C384120968D2B04 /* CRBoostSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CRBoostSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				8B272E14605673FF0063605E34EE9388 /* CRMacros.swift */,
 				288DBA6C67A06B33357FA91813702236 /* CRMath.swift */,
 				B73A747F630EC7126F30B01388E148CC /* Foundation+CRBoost.swift */,
+				0729118E22D1A1C5003BA919 /* UIKit+CRBoost.swift */,
 				6B2AE305E5D2610F55D9EA156C2D77BE /* Utility.swift */,
 				EC0A75B905D762FFD562A9627294153F /* Pod */,
 				CF97BB434F7059AC06706C900FBBB4DC /* Support Files */,
@@ -390,6 +393,7 @@
 				AED342E292623916D05D953D37CA6DDD /* CRBoostSwift-dummy.m in Sources */,
 				2BB68D4D231EB466461E312C91EE88A1 /* CRMacros.swift in Sources */,
 				8C3F47807C7E9C7BE410F990A0FA1DEE /* CRMath.swift in Sources */,
+				0729118F22D1A1C5003BA919 /* UIKit+CRBoost.swift in Sources */,
 				BCAC0AD9909B49AD3484FBC53386B420 /* Foundation+CRBoost.swift in Sources */,
 				B534BFAF2FCEBD94C414C484EFC3CAE5 /* Utility.swift in Sources */,
 			);
@@ -727,8 +731,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
