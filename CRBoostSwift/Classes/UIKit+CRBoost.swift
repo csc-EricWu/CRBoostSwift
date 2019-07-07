@@ -153,6 +153,22 @@ extension UIView {
 
     // MARK: - method
 
+    public func setLayerShadow(color: UIColor, offset: CGSize, radius: CGFloat) {
+        layer.shadowColor = color.cgColor
+        layer.shadowOffset = offset
+        layer.shadowRadius = radius
+        layer.shadowOpacity = 1
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
+    }
+
+    @discardableResult
+    public class func loadFramNib<T>(nibName: String) -> T where T: UIView {
+        let nib = Bundle.main.loadNibNamed(nibName, owner: self, options: [:])
+        let view = nib![0]
+        return view as! T
+    }
+
     @discardableResult
     public func topLayerSubview(_ tag: Int) -> UIView? {
         return subviews.first { (view) -> Bool in
