@@ -138,7 +138,7 @@ public func CRDisplayNetworkIndicator(flag: Bool) {
 // MARK: - system
 
 public let CRAppBuild = Bundle.main.infoDictionary![kCFBundleVersionKey as String] as! String
-public let CRAppVersionShort = Bundle.main.infoDictionary!["CRAppVersionShort"] as! String
+public let CRAppVersionShort = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
 public let CRAppName = Bundle.main.infoDictionary!["CFBundleDisplayName"] as! String
 
 public let CRIdfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString

@@ -371,8 +371,10 @@ public func CRPresentAlert(title: String?, msg: String, handler: AlertAction? = 
         alert.addAction(alertAction)
     }
     action.forEach { item in
-        let alertAction = UIAlertAction(title: item, style: .default, handler: handler)
-        alert.addAction(alertAction)
+        if !item.isEmpty {
+            let alertAction = UIAlertAction(title: item, style: .default, handler: handler)
+            alert.addAction(alertAction)
+        }
     }
     CRTopViewController()?.present(alert, animated: true, completion: nil)
     return alert
@@ -567,7 +569,7 @@ public func CRIsNullOrEmpty(text: String?) -> Bool {
         guard !string.isEmpty && string != "(null)" && string != "<null>" else {
             return true
         }
-    } else { return true}
+    } else { return true }
     return false
 }
 
