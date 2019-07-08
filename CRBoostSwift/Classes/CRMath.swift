@@ -67,7 +67,7 @@ public func CRDistance(start: CGPoint, end: CGPoint) -> CGFloat {
 }
 
 @discardableResult
-public func CRDistance(start: CGPoint, end: CGPoint) -> CGPoint {
+public func CRCenterPoint(start: CGPoint, end: CGPoint) -> CGPoint {
     return CGPoint(x: (end.x + start.x) / 2, y: (end.y + start.y) / 2)
 }
 
