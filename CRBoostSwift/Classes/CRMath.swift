@@ -177,7 +177,7 @@ public func CRScreenBounds(landscape: Bool) -> CGRect {
 
 @discardableResult
 public func CRScreenIsLandscape() -> Bool {
-    return UIInterfaceOrientation.landscapeLeft.isLandscape
+    return UIDevice.current.orientation.isLandscape
     // UIDeviceOrientationIsLandscape(CRCurrentDevice.orientation);
 }
 
