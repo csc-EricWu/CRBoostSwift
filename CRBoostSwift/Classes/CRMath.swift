@@ -518,9 +518,6 @@ public func CRIsMatch(pattern: String, text: String?) -> Bool {
     if CRIsNullOrEmpty(text: text) {
         return false
     }
-    if CRIsNullOrEmpty(text: pattern) {
-        return true
-    }
     if CRMatch(pattern: pattern, text: text) == nil {
         return false
     }
