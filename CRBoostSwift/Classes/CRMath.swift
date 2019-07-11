@@ -381,6 +381,24 @@ public func CRPresentAlert(title: String?, msg: String, handler: AlertAction? = 
 }
 
 @discardableResult
+public func CRPresentActionSheet(title: String? = nil, msg: String? = nil, handler: AlertAction? = nil, canel: String = "取消", actions: String...) -> UIAlertController {
+    let alert = UIAlertController(title: title, message: msg, preferredStyle: .actionSheet)
+    if !canel.isEmpty {
+        let alertAction = UIAlertAction(title: canel, style: .cancel, handler: handler)
+        alert.addAction(alertAction)
+    }
+    actions.forEach { item in
+        if !item.isEmpty {
+            let alertAction = UIAlertAction(title: item, style: .default, handler: handler)
+            alert.addAction(alertAction)
+        }
+    }
+    CRTopViewController()?.present(alert, animated: true, completion: nil)
+    return alert
+}
+
+
+@discardableResult
 public func CRPresentAlert(title: String?, msg: String) -> UIAlertController {
     return CRPresentAlert(title: title, msg: msg, handler: nil, canel: NSLocalizedString("OK", comment: ""))
 }
