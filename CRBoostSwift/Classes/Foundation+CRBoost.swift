@@ -61,9 +61,9 @@ extension String {
         return self .sizeWithFont(font: font, maxSize: CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)).height
     }
     @discardableResult
-    public func md5String(string: String) -> String {
+    public func md5String() -> String {
         let length = Int(CC_MD5_DIGEST_LENGTH)
-        let messageData = string.data(using: .utf8)!
+        let messageData = self.data(using: .utf8)!
         var digestData = Data(count: length)
         _ = digestData.withUnsafeMutableBytes { digestBytes -> UInt8 in
             messageData.withUnsafeBytes { messageBytes -> UInt8 in
