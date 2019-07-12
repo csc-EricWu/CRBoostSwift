@@ -78,6 +78,30 @@ extension String {
         return md5Hex
     }
     @discardableResult
+    public func base64String() -> String? {
+        if let data = self.data(using: .utf8) {
+            return data.base64EncodedString()
+        }
+        return nil
+    }
+
+    @discardableResult
+    public func base64Decoded() -> String? {
+        if let data = Data(base64Encoded: self) {
+            return String(data: data, encoding: .utf8)
+        }
+        return nil
+    }
+
+    @discardableResult
+    public func isBase64() -> Bool {
+        if Data(base64Encoded: self, options: []) != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    @discardableResult
     public func removeDecimalLastZeros () -> String {
         var result = self
         while result.contains(".") && result.hasSuffix("0") {
@@ -96,14 +120,6 @@ extension String {
         let randomCharacters = (0..<len).map {_ in self.randomElement()!}
         let randomString = String(randomCharacters)
         return randomString
-    }
-    @discardableResult
-    public func isBase64() -> Bool {
-        if Data(base64Encoded: self, options: []) != nil {
-            return true
-        } else {
-            return false
-        }
     }
 
     @discardableResult
@@ -607,5 +623,5 @@ extension UIColor {
     public class func colorWithString(string: String) -> UIColor {
         return UIColor()
     }
-    
+
 }

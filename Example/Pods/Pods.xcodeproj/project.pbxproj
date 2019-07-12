@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03BCC38E7ADC095E4289F90168491661 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		042225C894348096A5C6322909950969 /* Pods-CRBoostSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EEEB944AED188763299FD1EA279F72 /* Pods-CRBoostSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0729118F22D1A1C5003BA919 /* UIKit+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0729118E22D1A1C5003BA919 /* UIKit+CRBoost.swift */; };
-		2BB68D4D231EB466461E312C91EE88A1 /* CRMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B272E14605673FF0063605E34EE9388 /* CRMacros.swift */; };
-		3875807BC8B2CB3C6D4048E1DF53CB65 /* CRBoostSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB80AC7587CA03E73121DB727EB76FCC /* CRBoostSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30CAB5DB12A46A0C8137DA3B68B8D0A2 /* CRMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C574E412C0E74F3D577DFECB7813DCD /* CRMath.swift */; };
 		39DB19B13B5220ADD9682C6701DEEA9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		43BB41AF9782C689FC89D90CAAE356BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		541D3B0971C8023F4608848A63CDC0A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		62B48D4BC7CAF79001140D7E8F4B4F97 /* CRMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1494304EAA2161B4945F78C9EA9DAA5 /* CRMacros.swift */; };
+		833D585C92FD7B9E8C18215B75EF827F /* Foundation+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB71B5051DDDF74CC733FD29CFFEE376 /* Foundation+CRBoost.swift */; };
 		8B8D5A119B3835E9E3D4072A441C21C5 /* Pods-CRBoostSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BB787976720B6D04F697F0CA0F56EA7 /* Pods-CRBoostSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BFF2B36918604CB17615CA66249E681 /* Pods-CRBoostSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C342FFEACB7AA5C92C2931ED78618C1 /* Pods-CRBoostSwift_Tests-dummy.m */; };
-		8C3F47807C7E9C7BE410F990A0FA1DEE /* CRMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288DBA6C67A06B33357FA91813702236 /* CRMath.swift */; };
+		8CADD5A2DB6BD63DB3AAA30A11CEDB4F /* CRBoostSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94B72791AE97F0C1845AB9F075BC7323 /* CRBoostSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D0CBB5DC89E1DBACA476196EE135565 /* Pods-CRBoostSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F0379C21EE107A078BAB1E5BC9835 /* Pods-CRBoostSwift_Example-dummy.m */; };
-		AED342E292623916D05D953D37CA6DDD /* CRBoostSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD8751E529B3AD5920B0A8486EBD307 /* CRBoostSwift-dummy.m */; };
-		B534BFAF2FCEBD94C414C484EFC3CAE5 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2AE305E5D2610F55D9EA156C2D77BE /* Utility.swift */; };
-		BCAC0AD9909B49AD3484FBC53386B420 /* Foundation+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73A747F630EC7126F30B01388E148CC /* Foundation+CRBoost.swift */; };
+		8E40ACA1606CB64667C0EADEB60C9081 /* CRBoostSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B7CBBB0639458E03FA0DD7836C0024 /* CRBoostSwift-dummy.m */; };
+		DA3534AF7099D501768696B37EFEAE6A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A94BB6A8DCFBAF95A7EC6E951C8C21 /* Utility.swift */; };
+		DC9312DC7A964CB23668DF84D422EEC7 /* UIKit+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73163A1FFFAC6184FED831385CED7155 /* UIKit+CRBoost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,41 +41,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0729118E22D1A1C5003BA919 /* UIKit+CRBoost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIKit+CRBoost.swift"; path = "CRBoostSwift/Classes/UIKit+CRBoost.swift"; sourceTree = "<group>"; };
 		0C5830577A4FEE048197651E392AFD51 /* Pods-CRBoostSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Tests-Info.plist"; sourceTree = "<group>"; };
 		0E65148A5D6124F59250860AC659F543 /* Pods-CRBoostSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CRBoostSwift_Example.modulemap"; sourceTree = "<group>"; };
 		11BFB992D1C4CE334E0ED96EDD33768B /* Pods-CRBoostSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CRBoostSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CRBoostSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A3A6D7D69D3B4C95D359CDFCC7ED45 /* CRBoostSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CRBoostSwift-Info.plist"; sourceTree = "<group>"; };
+		1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CRBoostSwift.framework; path = CRBoostSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEA8EEBB87497915E18A08ABB939E36 /* Pods-CRBoostSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		288DBA6C67A06B33357FA91813702236 /* CRMath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CRMath.swift; path = CRBoostSwift/Classes/CRMath.swift; sourceTree = "<group>"; };
+		223393B18D0B5654AF157728A053DE1A /* CRBoostSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CRBoostSwift.modulemap; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		36D5ADCEE00977FC0A6521CE1E1128D5 /* Pods-CRBoostSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3886A1A80B40714F423EF26CAEC0F5B3 /* Pods-CRBoostSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		39EEEB944AED188763299FD1EA279F72 /* Pods-CRBoostSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CRBoostSwift_Example-umbrella.h"; sourceTree = "<group>"; };
-		3E600537D040F3E700606AC3D0F03C2E /* CRBoostSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CRBoostSwift.modulemap; sourceTree = "<group>"; };
-		486EFFA80A7B837BCC5EB8BFBB64B6E4 /* CRBoostSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRBoostSwift.xcconfig; sourceTree = "<group>"; };
-		54B76B7944D94043EA162E695B4E0DC6 /* Pods_CRBoostSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRBoostSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46A94BB6A8DCFBAF95A7EC6E951C8C21 /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = CRBoostSwift/Classes/Utility.swift; sourceTree = "<group>"; };
+		4C574E412C0E74F3D577DFECB7813DCD /* CRMath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CRMath.swift; path = CRBoostSwift/Classes/CRMath.swift; sourceTree = "<group>"; };
+		54B76B7944D94043EA162E695B4E0DC6 /* Pods_CRBoostSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CRBoostSwift_Tests.framework; path = "Pods-CRBoostSwift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1EF87582AEEF166DD24597F10D1D73 /* Pods-CRBoostSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CRBoostSwift_Tests.modulemap"; sourceTree = "<group>"; };
+		5CC9B349734DAE0C7C9D6BAD1A2C0EE7 /* CRBoostSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoostSwift-prefix.pch"; sourceTree = "<group>"; };
 		5E5976BA8F3049A902DD93C889B65806 /* Pods-CRBoostSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRBoostSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
-		6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods_CRBoostSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRBoostSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B2AE305E5D2610F55D9EA156C2D77BE /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = CRBoostSwift/Classes/Utility.swift; sourceTree = "<group>"; };
+		62B14D36EC0C3626C0BCFB8A96378BBC /* CRBoostSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CRBoostSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods_CRBoostSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CRBoostSwift_Example.framework; path = "Pods-CRBoostSwift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C342FFEACB7AA5C92C2931ED78618C1 /* Pods-CRBoostSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CRBoostSwift_Tests-dummy.m"; sourceTree = "<group>"; };
-		8A4ACAF10044F79305EB498FD3B35FDF /* CRBoostSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoostSwift-prefix.pch"; sourceTree = "<group>"; };
-		8B272E14605673FF0063605E34EE9388 /* CRMacros.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CRMacros.swift; path = CRBoostSwift/Classes/CRMacros.swift; sourceTree = "<group>"; };
-		8CD8751E529B3AD5920B0A8486EBD307 /* CRBoostSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRBoostSwift-dummy.m"; sourceTree = "<group>"; };
+		73163A1FFFAC6184FED831385CED7155 /* UIKit+CRBoost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+CRBoost.swift"; path = "CRBoostSwift/Classes/UIKit+CRBoost.swift"; sourceTree = "<group>"; };
 		92AB99E96EC6DC4A28DEC4E2D9F739F1 /* Pods-CRBoostSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		93B7CBBB0639458E03FA0DD7836C0024 /* CRBoostSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRBoostSwift-dummy.m"; sourceTree = "<group>"; };
+		94B72791AE97F0C1845AB9F075BC7323 /* CRBoostSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoostSwift-umbrella.h"; sourceTree = "<group>"; };
 		9BB787976720B6D04F697F0CA0F56EA7 /* Pods-CRBoostSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CRBoostSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A39955180D8395AD5FD6EABF4546A063 /* Pods-CRBoostSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A41993E23E78BB1A15D0D2D3458D6B1F /* CRBoostSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CRBoostSwift-Info.plist"; sourceTree = "<group>"; };
 		A5DE7B9CA59FE3A8AF98AB6C70CDB719 /* Pods-CRBoostSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Example-Info.plist"; sourceTree = "<group>"; };
-		AB80AC7587CA03E73121DB727EB76FCC /* CRBoostSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoostSwift-umbrella.h"; sourceTree = "<group>"; };
-		B73A747F630EC7126F30B01388E148CC /* Foundation+CRBoost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Foundation+CRBoost.swift"; path = "CRBoostSwift/Classes/Foundation+CRBoost.swift"; sourceTree = "<group>"; };
-		BFC0E7A7415240D2C5BE07730E752A26 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A6DF08C14EE9BEFBC55C0111EB8784AE /* CRBoostSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRBoostSwift.xcconfig; sourceTree = "<group>"; };
+		AB71B5051DDDF74CC733FD29CFFEE376 /* Foundation+CRBoost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Foundation+CRBoost.swift"; path = "CRBoostSwift/Classes/Foundation+CRBoost.swift"; sourceTree = "<group>"; };
+		C1494304EAA2161B4945F78C9EA9DAA5 /* CRMacros.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CRMacros.swift; path = CRBoostSwift/Classes/CRMacros.swift; sourceTree = "<group>"; };
 		D0CF78625C39452597D05AC1300C8C90 /* Pods-CRBoostSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D87F0379C21EE107A078BAB1E5BC9835 /* Pods-CRBoostSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CRBoostSwift_Example-dummy.m"; sourceTree = "<group>"; };
 		E8C332191AE7505F9400FCAAFCB98959 /* Pods-CRBoostSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CRBoostSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F6E6951B0F76F1240C384120968D2B04 /* CRBoostSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CRBoostSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ECE9528035F416727EB14EE6C75960A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +87,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8F236BBD04B4E4190F9B4AB21937D059 /* Frameworks */ = {
+		91A1ACC27F2EF87F7FEECF4667F6EBF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03BCC38E7ADC095E4289F90168491661 /* Foundation.framework in Frameworks */,
+				43BB41AF9782C689FC89D90CAAE356BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,19 +132,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4BC654FC4FDB0708DC6D52DAB15AB813 /* CRBoostSwift */ = {
+		5CED3263FFECE509626ECB51AFA6785A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8B272E14605673FF0063605E34EE9388 /* CRMacros.swift */,
-				288DBA6C67A06B33357FA91813702236 /* CRMath.swift */,
-				B73A747F630EC7126F30B01388E148CC /* Foundation+CRBoost.swift */,
-				0729118E22D1A1C5003BA919 /* UIKit+CRBoost.swift */,
-				6B2AE305E5D2610F55D9EA156C2D77BE /* Utility.swift */,
-				EC0A75B905D762FFD562A9627294153F /* Pod */,
-				CF97BB434F7059AC06706C900FBBB4DC /* Support Files */,
+				223393B18D0B5654AF157728A053DE1A /* CRBoostSwift.modulemap */,
+				A6DF08C14EE9BEFBC55C0111EB8784AE /* CRBoostSwift.xcconfig */,
+				93B7CBBB0639458E03FA0DD7836C0024 /* CRBoostSwift-dummy.m */,
+				14A3A6D7D69D3B4C95D359CDFCC7ED45 /* CRBoostSwift-Info.plist */,
+				5CC9B349734DAE0C7C9D6BAD1A2C0EE7 /* CRBoostSwift-prefix.pch */,
+				94B72791AE97F0C1845AB9F075BC7323 /* CRBoostSwift-umbrella.h */,
 			);
-			name = CRBoostSwift;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CRBoostSwift";
 			sourceTree = "<group>";
 		};
 		7698BDE6220223FF731F0A5C6C0A2D10 /* Targets Support Files */ = {
@@ -154,6 +153,15 @@
 				0674F91D9DB3B83826983F0F203A5544 /* Pods-CRBoostSwift_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A35412B084E6AE5833ABEDA88D0A9AED /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				62B14D36EC0C3626C0BCFB8A96378BBC /* CRBoostSwift.podspec */,
+				ECE9528035F416727EB14EE6C75960A6 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		A3F1E05808C625EBE4ED7E276FB7EB86 /* Pods-CRBoostSwift_Example */ = {
@@ -185,25 +193,11 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				DA7C97253475F457D2F7DA530E8FC1A5 /* Development Pods */,
+				D9DFBE14CAD645D7AC7586E41E57131B /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				436CDBF6F486DAD0F7C9A7B4E0E88E80 /* Products */,
 				7698BDE6220223FF731F0A5C6C0A2D10 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		CF97BB434F7059AC06706C900FBBB4DC /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3E600537D040F3E700606AC3D0F03C2E /* CRBoostSwift.modulemap */,
-				486EFFA80A7B837BCC5EB8BFBB64B6E4 /* CRBoostSwift.xcconfig */,
-				8CD8751E529B3AD5920B0A8486EBD307 /* CRBoostSwift-dummy.m */,
-				A41993E23E78BB1A15D0D2D3458D6B1F /* CRBoostSwift-Info.plist */,
-				8A4ACAF10044F79305EB498FD3B35FDF /* CRBoostSwift-prefix.pch */,
-				AB80AC7587CA03E73121DB727EB76FCC /* CRBoostSwift-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CRBoostSwift";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -214,26 +208,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DA7C97253475F457D2F7DA530E8FC1A5 /* Development Pods */ = {
+		D9DFBE14CAD645D7AC7586E41E57131B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4BC654FC4FDB0708DC6D52DAB15AB813 /* CRBoostSwift */,
+				DA07E563EA919D3CB1AEFF3D91C30BE3 /* CRBoostSwift */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		EC0A75B905D762FFD562A9627294153F /* Pod */ = {
+		DA07E563EA919D3CB1AEFF3D91C30BE3 /* CRBoostSwift */ = {
 			isa = PBXGroup;
 			children = (
-				F6E6951B0F76F1240C384120968D2B04 /* CRBoostSwift.podspec */,
-				BFC0E7A7415240D2C5BE07730E752A26 /* README.md */,
+				C1494304EAA2161B4945F78C9EA9DAA5 /* CRMacros.swift */,
+				4C574E412C0E74F3D577DFECB7813DCD /* CRMath.swift */,
+				AB71B5051DDDF74CC733FD29CFFEE376 /* Foundation+CRBoost.swift */,
+				73163A1FFFAC6184FED831385CED7155 /* UIKit+CRBoost.swift */,
+				46A94BB6A8DCFBAF95A7EC6E951C8C21 /* Utility.swift */,
+				A35412B084E6AE5833ABEDA88D0A9AED /* Pod */,
+				5CED3263FFECE509626ECB51AFA6785A /* Support Files */,
 			);
-			name = Pod;
+			name = CRBoostSwift;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0F79E5709A8DA08BF061229E7B7642C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CADD5A2DB6BD63DB3AAA30A11CEDB4F /* CRBoostSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1901EE5D55AA41CCC7C0C0758148031B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,14 +255,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				042225C894348096A5C6322909950969 /* Pods-CRBoostSwift_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CBCD1A8FC1E4F6E7EF241509744EFB27 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3875807BC8B2CB3C6D4048E1DF53CB65 /* CRBoostSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,12 +282,12 @@
 		};
 		66519C5F59EBFF4176C1A068DC04875A /* CRBoostSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61E2F6A10AF03D70EA21DB3B019E6A84 /* Build configuration list for PBXNativeTarget "CRBoostSwift" */;
+			buildConfigurationList = 6A0D92986ECF16381E40187853C7A4B5 /* Build configuration list for PBXNativeTarget "CRBoostSwift" */;
 			buildPhases = (
-				CBCD1A8FC1E4F6E7EF241509744EFB27 /* Headers */,
-				F51A3D9249187CA7D872139E6355D520 /* Sources */,
-				8F236BBD04B4E4190F9B4AB21937D059 /* Frameworks */,
-				EFEBE870AFE9E7F2B846C9B277CBA079 /* Resources */,
+				0F79E5709A8DA08BF061229E7B7642C3 /* Headers */,
+				0BBBD7B556F3053E9A55AB81427A8238 /* Sources */,
+				91A1ACC27F2EF87F7FEECF4667F6EBF1 /* Frameworks */,
+				CF905A257BC66D991F067D5714F54301 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -360,7 +360,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EFEBE870AFE9E7F2B846C9B277CBA079 /* Resources */ = {
+		CF905A257BC66D991F067D5714F54301 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,6 +370,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0BBBD7B556F3053E9A55AB81427A8238 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E40ACA1606CB64667C0EADEB60C9081 /* CRBoostSwift-dummy.m in Sources */,
+				62B48D4BC7CAF79001140D7E8F4B4F97 /* CRMacros.swift in Sources */,
+				30CAB5DB12A46A0C8137DA3B68B8D0A2 /* CRMath.swift in Sources */,
+				833D585C92FD7B9E8C18215B75EF827F /* Foundation+CRBoost.swift in Sources */,
+				DC9312DC7A964CB23668DF84D422EEC7 /* UIKit+CRBoost.swift in Sources */,
+				DA3534AF7099D501768696B37EFEAE6A /* Utility.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		298290711DABA5386FA36D55C6880DFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,19 +396,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D0CBB5DC89E1DBACA476196EE135565 /* Pods-CRBoostSwift_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F51A3D9249187CA7D872139E6355D520 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AED342E292623916D05D953D37CA6DDD /* CRBoostSwift-dummy.m in Sources */,
-				2BB68D4D231EB466461E312C91EE88A1 /* CRMacros.swift in Sources */,
-				8C3F47807C7E9C7BE410F990A0FA1DEE /* CRMath.swift in Sources */,
-				0729118F22D1A1C5003BA919 /* UIKit+CRBoost.swift in Sources */,
-				BCAC0AD9909B49AD3484FBC53386B420 /* Foundation+CRBoost.swift in Sources */,
-				B534BFAF2FCEBD94C414C484EFC3CAE5 /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +417,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2A0A81D251732702D157C839B06F92E5 /* Release */ = {
+		64F603D2A1E97E5AFEA6C456CA6CB3EF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 486EFFA80A7B837BCC5EB8BFBB64B6E4 /* CRBoostSwift.xcconfig */;
+			baseConfigurationReference = A6DF08C14EE9BEFBC55C0111EB8784AE /* CRBoostSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -449,9 +449,9 @@
 			};
 			name = Release;
 		};
-		3A46715BE0C1B3CA9DBEBDA32997A668 /* Debug */ = {
+		8B98535AF011B4516FE1009E11565970 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 486EFFA80A7B837BCC5EB8BFBB64B6E4 /* CRBoostSwift.xcconfig */;
+			baseConfigurationReference = A6DF08C14EE9BEFBC55C0111EB8784AE /* CRBoostSwift.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -731,7 +731,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -749,11 +750,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61E2F6A10AF03D70EA21DB3B019E6A84 /* Build configuration list for PBXNativeTarget "CRBoostSwift" */ = {
+		6A0D92986ECF16381E40187853C7A4B5 /* Build configuration list for PBXNativeTarget "CRBoostSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3A46715BE0C1B3CA9DBEBDA32997A668 /* Debug */,
-				2A0A81D251732702D157C839B06F92E5 /* Release */,
+				8B98535AF011B4516FE1009E11565970 /* Debug */,
+				64F603D2A1E97E5AFEA6C456CA6CB3EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
