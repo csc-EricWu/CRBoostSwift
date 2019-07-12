@@ -264,16 +264,16 @@ public func CRTabBarHeight(controller: UIViewController) -> CGFloat {
 }
 
 @discardableResult
-public func CRPopToViewController(navigation: UINavigationController?, controller: UIViewController?, animated: Bool) -> Bool {
+public func CRPopToViewController(navigation: UINavigationController?, controller: UIViewController.Type, animated: Bool) -> Bool {
     var found = false
-    guard navigation != nil && controller != nil else {
+    guard navigation != nil else {
         return found
     }
     if navigation!.isKind(of: UINavigationController.self) {
         for ctrl in navigation!.viewControllers {
-            if ctrl.isKind(of: type(of: controller!)) {
+            if ctrl.isKind(of: controller) {
                 found = true
-                navigation?.popToViewController(controller!, animated: animated)
+                navigation?.popToViewController(ctrl, animated: animated)
                 break
             }
         }
