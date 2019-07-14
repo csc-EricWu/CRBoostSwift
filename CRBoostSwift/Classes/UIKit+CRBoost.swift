@@ -163,9 +163,9 @@ extension UIView {
     }
 
     @discardableResult
-    public class func loadFromNib<T>(nibName: String) -> T where T: UIView {
+    public class func loadFromNib<T>(nibName: String, index: Int = 0) -> T where T: UIView {
         let nib = Bundle.main.loadNibNamed(nibName, owner: self, options: [:])
-        let view = nib![0]
+        let view = nib![index]
         return view as! T
     }
 
@@ -198,6 +198,7 @@ extension UIView {
         }
         return nil
     }
+
     @discardableResult
     public func viewController<T>() -> T? where T: UIViewController {
         var view: UIView? = self
@@ -209,25 +210,29 @@ extension UIView {
         }
         return nil
     }
+
     // MARK: - snapshot
+
     @discardableResult
     public func snapshotImage() -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(size, self.isOpaque, 0)
-        if let ctx =  UIGraphicsGetCurrentContext() {
-            self.layer.render(in: ctx)
+        UIGraphicsBeginImageContextWithOptions(size, isOpaque, 0)
+        if let ctx = UIGraphicsGetCurrentContext() {
+            layer.render(in: ctx)
         }
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
     }
+
     @discardableResult
     public func snapshotImageAfterScreenUpdates(afterUpdates: Bool) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(size, self.isOpaque, 0)
-        self.drawHierarchy(in: bounds, afterScreenUpdates: afterUpdates)
+        UIGraphicsBeginImageContextWithOptions(size, isOpaque, 0)
+        drawHierarchy(in: bounds, afterScreenUpdates: afterUpdates)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
     }
+
     // MARK: - animation
 
     public func pulsateOnce() {
@@ -313,10 +318,11 @@ extension UIView {
 
 extension CALayer {
     // MARK: - snapshot
+
     @discardableResult
     public func snapshotImage() -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.isOpaque, 0)
-        if let ctx =  UIGraphicsGetCurrentContext() {
+        UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0)
+        if let ctx = UIGraphicsGetCurrentContext() {
             render(in: ctx)
         }
         let image = UIGraphicsGetImageFromCurrentImageContext()
