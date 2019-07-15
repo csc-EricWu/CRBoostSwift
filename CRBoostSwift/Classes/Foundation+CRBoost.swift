@@ -278,6 +278,20 @@ extension String {
     }
 }
 
+extension Collection where Element: Equatable {
+    public func indexDistance(of element: Element) -> Int? {
+        guard let index = firstIndex(of: element) else { return nil }
+        return distance(from: startIndex, to: index)
+    }
+}
+
+extension StringProtocol {
+    public func indexDistance(of string: Self) -> Int? {
+        guard let index = range(of: string)?.lowerBound else { return nil }
+        return distance(from: startIndex, to: index)
+    }
+}
+
 //    https://stackoverflow.com/questions/24092884/get-nth-character-of-a-string-in-swift-programming-language
 extension String {
     public subscript(i: Int) -> Character {
