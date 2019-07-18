@@ -743,13 +743,19 @@ extension UIImage {
         // 2. 给滤镜添加数据
         let data = codeStr!.data(using: String.Encoding.utf8)
         filter.setValue(data, forKey: "inputMessage")
-        // 3. 生成高清二维码
-        let image = filter.outputImage
-        let transform = CGAffineTransform(scaleX: 5.0, y: 5.0)
-        guard let output = image?.transformed(by: transform) else { return nil }
-        // 4. 显示二维码
-        let newImage = UIImage(ciImage: output, scale: UIScreen.main.scale, orientation: UIImage.Orientation.up)
-        return newImage
+        // 3. 生成高清二维码 CIImage
+        if let image = filter.outputImage {
+            let transform = CGAffineTransform(scaleX: 5.0, y: 5.0)
+            let output = image.transformed(by: transform)
+            // 解决图片无法保存
+            let context = CIContext(options: nil)
+            if let bitmapImage = context.createCGImage(output, from: output.extent) {
+                // 4. 显示二维码
+                let newImage =  UIImage(cgImage: bitmapImage, scale: UIScreen.main.scale, orientation: UIImage.Orientation.up)
+                return newImage
+            }
+        }
+        return nil
     }
 }
 
