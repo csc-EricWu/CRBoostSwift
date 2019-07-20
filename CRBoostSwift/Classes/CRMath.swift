@@ -256,15 +256,14 @@ public func CRBottomAdditionalHeight() -> CGFloat {
 @discardableResult
 public func CRTabBarHeight(controller: UIViewController) -> CGFloat {
     var height: CGFloat = 0
-    if controller.tabBarController != nil && !(controller.tabBarController!.tabBar.isHidden) {
-        height = controller.tabBarController!.tabBar.bounds.height
+    if let tabBar = controller.tabBarController?.tabBar, !tabBar.isHidden {
+        height = tabBar.bounds.height
     }
-    height += CRSafeAreaInsets().bottom
     return height
 }
 
 @discardableResult
-public func CRPopToViewController(navigation: UINavigationController?, controller: UIViewController.Type, animated: Bool) -> Bool {
+public func CRPopToController(navigation: UINavigationController?, controller: UIViewController.Type, animated: Bool) -> Bool {
     var found = false
     guard navigation != nil else {
         return found
