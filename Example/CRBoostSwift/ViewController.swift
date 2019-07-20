@@ -6,6 +6,8 @@
 //  Copyright (c) 2019 csc-EricWu. All rights reserved.
 //
 
+// MARK: - subscript
+
 import CRBoostSwift
 import UIKit
 
@@ -21,12 +23,14 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-           print("Hello word!/".joinUrl(url: "/333"))
-           print("Hello word!".joinUrl(url: "333"))
-        print("Hello word!".joinUrl(url: "/333"))
-        print("Hello word!/".joinUrl(url: "333"))
-        print(String(number:10,padding:10))
-        print("c2RzZHNkce2Q8".isBase64())
-        print(CRIsNullOrEmpty(text: nil))
+        CRPresentAlert(title: nil, msg: "安全验证", config: { alert in
+            alert.addTextField { textField in
+                textField.keyboardType = .asciiCapable
+                textField.isSecureTextEntry = true
+                textField.placeholder = "请输入登陆密码"
+            }
+        }, handler: { _ in
+
+        }, canel: "取消", action: "确定")
     }
 }

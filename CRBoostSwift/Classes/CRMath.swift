@@ -364,7 +364,7 @@ public func CRPresentView(view: UIView, animated: Bool) {
 }
 
 @discardableResult
-public func CRPresentAlert(title: String?, msg: String, handler: AlertAction? = nil, canel: String, action: String...) -> UIAlertController {
+public func CRPresentAlert(title: String?, msg: String, config: ((_ alert: UIAlertController) -> Void)? = nil, handler: AlertAction? = nil, canel: String, action: String...) -> UIAlertController {
     let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
     if !canel.isEmpty {
         let alertAction = UIAlertAction(title: canel, style: .cancel, handler: handler)
@@ -376,6 +376,7 @@ public func CRPresentAlert(title: String?, msg: String, handler: AlertAction? = 
             alert.addAction(alertAction)
         }
     }
+    config?(alert)
     CRTopViewController()?.present(alert, animated: true, completion: nil)
     return alert
 }
