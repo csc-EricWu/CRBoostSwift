@@ -89,6 +89,16 @@ public class Utility {
         }
     }
 
+    public class func main(task: @escaping CRVoidBlock) {
+        if Thread.isMainThread {
+            task()
+        } else {
+            DispatchQueue.main.async {
+                task()
+            }
+        }
+    }
+
     // MARK: - View
 
     public class func presentView(view: UIView, animated: Bool) {
@@ -102,24 +112,25 @@ public class Utility {
     }
 
     // MARK: - storyboard
-    public class func controllerInStoryboard( storyboard: String, identifier: String) -> UIViewController {
+
+    public class func controllerInStoryboard(storyboard: String, identifier: String) -> UIViewController {
         let ontroller = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(withIdentifier: identifier)
         return ontroller
     }
-    // MARK: - goUrl
-    public class func goStringUrl(_ str: String?) {
 
+    // MARK: - goUrl
+
+    public class func goStringUrl(_ str: String?) {
         guard var trimStr = str else { return }
         trimStr = trimStr.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
         goURL(URL(string: trimStr))
     }
 
     public class func goURL(_ url: URL?) {
-        guard let trimUrl = url else { return}
+        guard let trimUrl = url else { return }
         if UIApplication.shared.canOpenURL(trimUrl) {
             if #available(iOS 10.0, *) {
-                UIApplication.shared.open(trimUrl, options: [:]) { (_) in
-
+                UIApplication.shared.open(trimUrl, options: [:]) { _ in
                 }
             } else {
                 UIApplication.shared.openURL(trimUrl)
