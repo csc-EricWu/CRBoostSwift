@@ -99,6 +99,12 @@ public class Utility {
         }
     }
 
+    public class func after(delay: TimeInterval, task: @escaping CRVoidBlock) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delay) {
+            task()
+        }
+    }
+
     // MARK: - View
 
     public class func presentView(view: UIView, animated: Bool) {

@@ -95,7 +95,7 @@ public func CRPointSacle(point: CGPoint, factor: CGFloat) -> CGPoint {
 
 @discardableResult
 public func CRFrameCenter(rect: CGRect) -> CGPoint {
-    return CGPoint(x: rect.minX + rect.size.width / 2, y: rect.minY + rect.size.height / 2)
+    return CGPoint(x: rect.midX, y: rect.midY)
 }
 
 @discardableResult

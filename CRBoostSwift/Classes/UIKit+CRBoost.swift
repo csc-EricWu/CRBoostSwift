@@ -57,7 +57,7 @@ extension UIView {
     // MARK: - property
 
     public var left: CGFloat {
-        get { return frame.midX }
+        get { return frame.minX }
         set { frame.origin.x = newValue }
     }
 
@@ -89,6 +89,16 @@ extension UIView {
     public var origin: CGPoint {
         get { return frame.origin }
         set { frame.origin = newValue }
+    }
+
+    public var centerX: CGFloat {
+        get { return center.x }
+        set { center.x = newValue }
+    }
+
+    public var centerY: CGFloat {
+        get { return center.y }
+        set { center.y = newValue }
     }
 
     public var size: CGSize {
