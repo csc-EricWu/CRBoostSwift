@@ -17,7 +17,8 @@ CRBoostSwift is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'CRBoostSwift'
+pod 'CRBoostSwift',:git => 'https://github.com/csc-EricWu/CRBoostSwift.git', :branch => 'master'
+
 ```
 
 ## Author

@@ -7,30 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		042225C894348096A5C6322909950969 /* Pods-CRBoostSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EEEB944AED188763299FD1EA279F72 /* Pods-CRBoostSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		042225C894348096A5C6322909950969 /* Pods-CRBoostSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8888608297C9A6B55623C49D26194E8 /* Pods-CRBoostSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30CAB5DB12A46A0C8137DA3B68B8D0A2 /* CRMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C574E412C0E74F3D577DFECB7813DCD /* CRMath.swift */; };
 		39DB19B13B5220ADD9682C6701DEEA9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		43BB41AF9782C689FC89D90CAAE356BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		541D3B0971C8023F4608848A63CDC0A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		62B48D4BC7CAF79001140D7E8F4B4F97 /* CRMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1494304EAA2161B4945F78C9EA9DAA5 /* CRMacros.swift */; };
 		833D585C92FD7B9E8C18215B75EF827F /* Foundation+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB71B5051DDDF74CC733FD29CFFEE376 /* Foundation+CRBoost.swift */; };
-		8B8D5A119B3835E9E3D4072A441C21C5 /* Pods-CRBoostSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BB787976720B6D04F697F0CA0F56EA7 /* Pods-CRBoostSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BFF2B36918604CB17615CA66249E681 /* Pods-CRBoostSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C342FFEACB7AA5C92C2931ED78618C1 /* Pods-CRBoostSwift_Tests-dummy.m */; };
 		8CADD5A2DB6BD63DB3AAA30A11CEDB4F /* CRBoostSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94B72791AE97F0C1845AB9F075BC7323 /* CRBoostSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D0CBB5DC89E1DBACA476196EE135565 /* Pods-CRBoostSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F0379C21EE107A078BAB1E5BC9835 /* Pods-CRBoostSwift_Example-dummy.m */; };
+		8D0CBB5DC89E1DBACA476196EE135565 /* Pods-CRBoostSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CDC2170F7C0D7848D9D7AEDC8E06E2 /* Pods-CRBoostSwift_Example-dummy.m */; };
 		8E40ACA1606CB64667C0EADEB60C9081 /* CRBoostSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B7CBBB0639458E03FA0DD7836C0024 /* CRBoostSwift-dummy.m */; };
 		DA3534AF7099D501768696B37EFEAE6A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A94BB6A8DCFBAF95A7EC6E951C8C21 /* Utility.swift */; };
 		DC9312DC7A964CB23668DF84D422EEC7 /* UIKit+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73163A1FFFAC6184FED831385CED7155 /* UIKit+CRBoost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7A7D23D61B589B3F784318BF1E44A8E0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 271E8F2B81FA062A4DBC12C172D25376;
-			remoteInfo = "Pods-CRBoostSwift_Example";
-		};
 		CBC58F34FACFA1F999989D97A2AB1BAC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -41,40 +31,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C5830577A4FEE048197651E392AFD51 /* Pods-CRBoostSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Tests-Info.plist"; sourceTree = "<group>"; };
-		0E65148A5D6124F59250860AC659F543 /* Pods-CRBoostSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CRBoostSwift_Example.modulemap"; sourceTree = "<group>"; };
-		11BFB992D1C4CE334E0ED96EDD33768B /* Pods-CRBoostSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CRBoostSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		07CDC2170F7C0D7848D9D7AEDC8E06E2 /* Pods-CRBoostSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CRBoostSwift_Example-dummy.m"; sourceTree = "<group>"; };
 		14A3A6D7D69D3B4C95D359CDFCC7ED45 /* CRBoostSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CRBoostSwift-Info.plist"; sourceTree = "<group>"; };
 		1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CRBoostSwift.framework; path = CRBoostSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EEA8EEBB87497915E18A08ABB939E36 /* Pods-CRBoostSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1DA7023117221A843AFC18E40A2F81C6 /* Pods-CRBoostSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CRBoostSwift_Example.modulemap"; sourceTree = "<group>"; };
 		223393B18D0B5654AF157728A053DE1A /* CRBoostSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CRBoostSwift.modulemap; sourceTree = "<group>"; };
+		26FA6D04F25A44CCD587FAEB14479155 /* Pods-CRBoostSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		36D5ADCEE00977FC0A6521CE1E1128D5 /* Pods-CRBoostSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3886A1A80B40714F423EF26CAEC0F5B3 /* Pods-CRBoostSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		39EEEB944AED188763299FD1EA279F72 /* Pods-CRBoostSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CRBoostSwift_Example-umbrella.h"; sourceTree = "<group>"; };
 		46A94BB6A8DCFBAF95A7EC6E951C8C21 /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = CRBoostSwift/Classes/Utility.swift; sourceTree = "<group>"; };
 		4C574E412C0E74F3D577DFECB7813DCD /* CRMath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CRMath.swift; path = CRBoostSwift/Classes/CRMath.swift; sourceTree = "<group>"; };
-		54B76B7944D94043EA162E695B4E0DC6 /* Pods_CRBoostSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CRBoostSwift_Tests.framework; path = "Pods-CRBoostSwift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C1EF87582AEEF166DD24597F10D1D73 /* Pods-CRBoostSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CRBoostSwift_Tests.modulemap"; sourceTree = "<group>"; };
 		5CC9B349734DAE0C7C9D6BAD1A2C0EE7 /* CRBoostSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoostSwift-prefix.pch"; sourceTree = "<group>"; };
-		5E5976BA8F3049A902DD93C889B65806 /* Pods-CRBoostSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRBoostSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
 		62B14D36EC0C3626C0BCFB8A96378BBC /* CRBoostSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CRBoostSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods_CRBoostSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CRBoostSwift_Example.framework; path = "Pods-CRBoostSwift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C342FFEACB7AA5C92C2931ED78618C1 /* Pods-CRBoostSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CRBoostSwift_Tests-dummy.m"; sourceTree = "<group>"; };
 		73163A1FFFAC6184FED831385CED7155 /* UIKit+CRBoost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+CRBoost.swift"; path = "CRBoostSwift/Classes/UIKit+CRBoost.swift"; sourceTree = "<group>"; };
-		92AB99E96EC6DC4A28DEC4E2D9F739F1 /* Pods-CRBoostSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		93B7CBBB0639458E03FA0DD7836C0024 /* CRBoostSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRBoostSwift-dummy.m"; sourceTree = "<group>"; };
 		94B72791AE97F0C1845AB9F075BC7323 /* CRBoostSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoostSwift-umbrella.h"; sourceTree = "<group>"; };
-		9BB787976720B6D04F697F0CA0F56EA7 /* Pods-CRBoostSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CRBoostSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A39955180D8395AD5FD6EABF4546A063 /* Pods-CRBoostSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A5DE7B9CA59FE3A8AF98AB6C70CDB719 /* Pods-CRBoostSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Example-Info.plist"; sourceTree = "<group>"; };
 		A6DF08C14EE9BEFBC55C0111EB8784AE /* CRBoostSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRBoostSwift.xcconfig; sourceTree = "<group>"; };
 		AB71B5051DDDF74CC733FD29CFFEE376 /* Foundation+CRBoost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Foundation+CRBoost.swift"; path = "CRBoostSwift/Classes/Foundation+CRBoost.swift"; sourceTree = "<group>"; };
+		AB94CE136B6F77349214B4529E31E0E4 /* Pods-CRBoostSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CRBoostSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B8A8C5342743DDA54CA267179D9D6A72 /* Pods-CRBoostSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		BF85406FD0874B705C9AED977D66EEBA /* Pods-CRBoostSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C1494304EAA2161B4945F78C9EA9DAA5 /* CRMacros.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CRMacros.swift; path = CRBoostSwift/Classes/CRMacros.swift; sourceTree = "<group>"; };
-		D0CF78625C39452597D05AC1300C8C90 /* Pods-CRBoostSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D87F0379C21EE107A078BAB1E5BC9835 /* Pods-CRBoostSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CRBoostSwift_Example-dummy.m"; sourceTree = "<group>"; };
-		E8C332191AE7505F9400FCAAFCB98959 /* Pods-CRBoostSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CRBoostSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D0778822E06EFF2E0BC9ED6580299A23 /* Pods-CRBoostSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CRBoostSwift_Example-Info.plist"; sourceTree = "<group>"; };
+		D8888608297C9A6B55623C49D26194E8 /* Pods-CRBoostSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CRBoostSwift_Example-umbrella.h"; sourceTree = "<group>"; };
+		E35B0EA5F58E2AB0FF1C68D4DB450BF2 /* Pods-CRBoostSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRBoostSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
 		ECE9528035F416727EB14EE6C75960A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,41 +76,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4F90C01BE5DC61338FD7327F8949F3C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				541D3B0971C8023F4608848A63CDC0A1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0674F91D9DB3B83826983F0F203A5544 /* Pods-CRBoostSwift_Tests */ = {
+		0DDD0C7EFDBF051B115188CC3B60DD1B /* Pods-CRBoostSwift_Example */ = {
 			isa = PBXGroup;
 			children = (
-				5C1EF87582AEEF166DD24597F10D1D73 /* Pods-CRBoostSwift_Tests.modulemap */,
-				11BFB992D1C4CE334E0ED96EDD33768B /* Pods-CRBoostSwift_Tests-acknowledgements.markdown */,
-				92AB99E96EC6DC4A28DEC4E2D9F739F1 /* Pods-CRBoostSwift_Tests-acknowledgements.plist */,
-				6C342FFEACB7AA5C92C2931ED78618C1 /* Pods-CRBoostSwift_Tests-dummy.m */,
-				0C5830577A4FEE048197651E392AFD51 /* Pods-CRBoostSwift_Tests-Info.plist */,
-				9BB787976720B6D04F697F0CA0F56EA7 /* Pods-CRBoostSwift_Tests-umbrella.h */,
-				1EEA8EEBB87497915E18A08ABB939E36 /* Pods-CRBoostSwift_Tests.debug.xcconfig */,
-				D0CF78625C39452597D05AC1300C8C90 /* Pods-CRBoostSwift_Tests.release.xcconfig */,
+				1DA7023117221A843AFC18E40A2F81C6 /* Pods-CRBoostSwift_Example.modulemap */,
+				AB94CE136B6F77349214B4529E31E0E4 /* Pods-CRBoostSwift_Example-acknowledgements.markdown */,
+				B8A8C5342743DDA54CA267179D9D6A72 /* Pods-CRBoostSwift_Example-acknowledgements.plist */,
+				07CDC2170F7C0D7848D9D7AEDC8E06E2 /* Pods-CRBoostSwift_Example-dummy.m */,
+				E35B0EA5F58E2AB0FF1C68D4DB450BF2 /* Pods-CRBoostSwift_Example-frameworks.sh */,
+				D0778822E06EFF2E0BC9ED6580299A23 /* Pods-CRBoostSwift_Example-Info.plist */,
+				D8888608297C9A6B55623C49D26194E8 /* Pods-CRBoostSwift_Example-umbrella.h */,
+				26FA6D04F25A44CCD587FAEB14479155 /* Pods-CRBoostSwift_Example.debug.xcconfig */,
+				BF85406FD0874B705C9AED977D66EEBA /* Pods-CRBoostSwift_Example.release.xcconfig */,
 			);
-			name = "Pods-CRBoostSwift_Tests";
-			path = "Target Support Files/Pods-CRBoostSwift_Tests";
-			sourceTree = "<group>";
-		};
-		436CDBF6F486DAD0F7C9A7B4E0E88E80 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift.framework */,
-				6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods_CRBoostSwift_Example.framework */,
-				54B76B7944D94043EA162E695B4E0DC6 /* Pods_CRBoostSwift_Tests.framework */,
-			);
-			name = Products;
+			name = "Pods-CRBoostSwift_Example";
+			path = "Target Support Files/Pods-CRBoostSwift_Example";
 			sourceTree = "<group>";
 		};
 		5CED3263FFECE509626ECB51AFA6785A /* Support Files */ = {
@@ -146,13 +110,13 @@
 			path = "Example/Pods/Target Support Files/CRBoostSwift";
 			sourceTree = "<group>";
 		};
-		7698BDE6220223FF731F0A5C6C0A2D10 /* Targets Support Files */ = {
+		83696DF42F4351EBFB72B0CCDAD24808 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A3F1E05808C625EBE4ED7E276FB7EB86 /* Pods-CRBoostSwift_Example */,
-				0674F91D9DB3B83826983F0F203A5544 /* Pods-CRBoostSwift_Tests */,
+				1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift.framework */,
+				6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods_CRBoostSwift_Example.framework */,
 			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A35412B084E6AE5833ABEDA88D0A9AED /* Pod */ = {
@@ -164,21 +128,12 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		A3F1E05808C625EBE4ED7E276FB7EB86 /* Pods-CRBoostSwift_Example */ = {
+		B4CF988E8A9BCFAB73475FA096257A74 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0E65148A5D6124F59250860AC659F543 /* Pods-CRBoostSwift_Example.modulemap */,
-				E8C332191AE7505F9400FCAAFCB98959 /* Pods-CRBoostSwift_Example-acknowledgements.markdown */,
-				A39955180D8395AD5FD6EABF4546A063 /* Pods-CRBoostSwift_Example-acknowledgements.plist */,
-				D87F0379C21EE107A078BAB1E5BC9835 /* Pods-CRBoostSwift_Example-dummy.m */,
-				5E5976BA8F3049A902DD93C889B65806 /* Pods-CRBoostSwift_Example-frameworks.sh */,
-				A5DE7B9CA59FE3A8AF98AB6C70CDB719 /* Pods-CRBoostSwift_Example-Info.plist */,
-				39EEEB944AED188763299FD1EA279F72 /* Pods-CRBoostSwift_Example-umbrella.h */,
-				3886A1A80B40714F423EF26CAEC0F5B3 /* Pods-CRBoostSwift_Example.debug.xcconfig */,
-				36D5ADCEE00977FC0A6521CE1E1128D5 /* Pods-CRBoostSwift_Example.release.xcconfig */,
+				0DDD0C7EFDBF051B115188CC3B60DD1B /* Pods-CRBoostSwift_Example */,
 			);
-			name = "Pods-CRBoostSwift_Example";
-			path = "Target Support Files/Pods-CRBoostSwift_Example";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -195,8 +150,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D9DFBE14CAD645D7AC7586E41E57131B /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				436CDBF6F486DAD0F7C9A7B4E0E88E80 /* Products */,
-				7698BDE6220223FF731F0A5C6C0A2D10 /* Targets Support Files */,
+				83696DF42F4351EBFB72B0CCDAD24808 /* Products */,
+				B4CF988E8A9BCFAB73475FA096257A74 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,14 +194,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CADD5A2DB6BD63DB3AAA30A11CEDB4F /* CRBoostSwift-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1901EE5D55AA41CCC7C0C0758148031B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B8D5A119B3835E9E3D4072A441C21C5 /* Pods-CRBoostSwift_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,25 +245,6 @@
 			productReference = 1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DDFF799A5199B1EC0F4EDB0527CD19BD /* Pods-CRBoostSwift_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F7E49C90255D049DBA5E7B3DD97D4AB6 /* Build configuration list for PBXNativeTarget "Pods-CRBoostSwift_Tests" */;
-			buildPhases = (
-				1901EE5D55AA41CCC7C0C0758148031B /* Headers */,
-				298290711DABA5386FA36D55C6880DFF /* Sources */,
-				E4F90C01BE5DC61338FD7327F8949F3C /* Frameworks */,
-				4D1915CDBDC6D3874BDE5A6CED4ED3A9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2BA887580C856679873FF8CDAAF58914 /* PBXTargetDependency */,
-			);
-			name = "Pods-CRBoostSwift_Tests";
-			productName = "Pods-CRBoostSwift_Tests";
-			productReference = 54B76B7944D94043EA162E695B4E0DC6 /* Pods_CRBoostSwift_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -334,25 +262,17 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 436CDBF6F486DAD0F7C9A7B4E0E88E80 /* Products */;
+			productRefGroup = 83696DF42F4351EBFB72B0CCDAD24808 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				66519C5F59EBFF4176C1A068DC04875A /* CRBoostSwift */,
 				271E8F2B81FA062A4DBC12C172D25376 /* Pods-CRBoostSwift_Example */,
-				DDFF799A5199B1EC0F4EDB0527CD19BD /* Pods-CRBoostSwift_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4D1915CDBDC6D3874BDE5A6CED4ED3A9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C465D1618F850F6C40D28C7B49EE35DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,14 +303,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		298290711DABA5386FA36D55C6880DFF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8BFF2B36918604CB17615CA66249E681 /* Pods-CRBoostSwift_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C5C00BFCE87A50962D4BD19E2DFE42AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,12 +314,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2BA887580C856679873FF8CDAAF58914 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-CRBoostSwift_Example";
-			target = 271E8F2B81FA062A4DBC12C172D25376 /* Pods-CRBoostSwift_Example */;
-			targetProxy = 7A7D23D61B589B3F784318BF1E44A8E0 /* PBXContainerItemProxy */;
-		};
 		E056E17A3F5B14CBF374A888CFD8537A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CRBoostSwift;
@@ -480,42 +386,9 @@
 			};
 			name = Debug;
 		};
-		95D8943F09A34A105EF396812C7FACD0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EEA8EEBB87497915E18A08ABB939E36 /* Pods-CRBoostSwift_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CRBoostSwift_Tests/Pods-CRBoostSwift_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CRBoostSwift_Tests/Pods-CRBoostSwift_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		ADB839643203459CFE558D8C6FAA40DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36D5ADCEE00977FC0A6521CE1E1128D5 /* Pods-CRBoostSwift_Example.release.xcconfig */;
+			baseConfigurationReference = BF85406FD0874B705C9AED977D66EEBA /* Pods-CRBoostSwift_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -613,7 +486,7 @@
 		};
 		CD46F2A33D3998545DEB979F1E66410B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3886A1A80B40714F423EF26CAEC0F5B3 /* Pods-CRBoostSwift_Example.debug.xcconfig */;
+			baseConfigurationReference = 26FA6D04F25A44CCD587FAEB14479155 /* Pods-CRBoostSwift_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -643,40 +516,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		DE9AB8C0A5DE701B480E809ED92F928A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0CF78625C39452597D05AC1300C8C90 /* Pods-CRBoostSwift_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CRBoostSwift_Tests/Pods-CRBoostSwift_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CRBoostSwift_Tests/Pods-CRBoostSwift_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		F90907FE3EEB00ADC71F082E616DC5D0 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -764,15 +603,6 @@
 			buildConfigurations = (
 				CD46F2A33D3998545DEB979F1E66410B /* Debug */,
 				ADB839643203459CFE558D8C6FAA40DB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F7E49C90255D049DBA5E7B3DD97D4AB6 /* Build configuration list for PBXNativeTarget "Pods-CRBoostSwift_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				95D8943F09A34A105EF396812C7FACD0 /* Debug */,
-				DE9AB8C0A5DE701B480E809ED92F928A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

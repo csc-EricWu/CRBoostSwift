@@ -12,25 +12,19 @@ import CRBoostSwift
 import UIKit
 
 class ViewController: UIViewController {
+    let btnAdd = UIButton(type: .contactAdd)
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        view.addSubview(btnAdd)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        CRPresentAlert(title: nil, msg: "安全验证", config: { alert in
-            alert.addTextField { textField in
-                textField.keyboardType = .asciiCapable
-                textField.isSecureTextEntry = true
-                textField.placeholder = "请输入登陆密码"
-            }
-        }, handler: { _ in
+        let rect = CGRect(x: 25, y: 20, width: 100, height: 100)
+        print("midX\(rect.midX),midY:\(rect.midY)")
+        print(CRFrameCenter(rect: rect))
+        btnAdd.centerX = view.centerX
+        btnAdd.centerY = view.centerY
+        print(CRIdfa)
 
-        }, canel: "取消", action: "确定")
     }
 }

@@ -141,7 +141,18 @@ public let CRAppBuild = Bundle.main.infoDictionary![kCFBundleVersionKey as Strin
 public let CRAppVersionShort = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
 public let CRAppName = Bundle.main.infoDictionary!["CFBundleDisplayName"] as! String
 
-public let CRIdfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+public let CRIdfa: String = {
+    var idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+    if #available(iOS 10.0, *) { // ios10更新之后一旦开启了 设置->隐私->广告->限制广告跟踪之后  获取到的idfa将会是一串00000
+        if !ASIdentifierManager.shared().isAdvertisingTrackingEnabled {
+            if let idfv = CRIdfv {
+                idfa = idfv // idfv 是一定可以获取到的
+            }
+        }
+    }
+    return idfa
+}()
+
 public let CRIdfv = UIDevice.current.identifierForVendor?.uuidString
 
 // MARK: - App Default
@@ -262,7 +273,7 @@ public func CRRGBA(r: Float, g: Float, b: Float, a: Float = 1) -> UIColor {
 // rgbValue is a Hex vaule without prefix 0x
 @discardableResult
 public func CRRGBA_X(rgb: Int, a: Float = 1) -> UIColor {
-    return CRRGBA(r: Float((rgb & 0xFF0000) >> 16), g: Float((rgb & 0xFF00) >> 8), b: (Float(rgb & 0xFF)), a: a)
+    return CRRGBA(r: Float((rgb & 0xFF0000) >> 16), g: Float((rgb & 0xFF00) >> 8), b: Float(rgb & 0xFF), a: a)
 }
 
 // MARK: - execution time
