@@ -19,12 +19,11 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let rect = CGRect(x: 25, y: 20, width: 100, height: 100)
-        print("midX\(rect.midX),midY:\(rect.midY)")
-        print(CRFrameCenter(rect: rect))
-        btnAdd.centerX = view.centerX
-        btnAdd.centerY = view.centerY
-        print(CRIdfa)
+//        print("a".retainDecimal(5))
+//        print("1".retainDecimal(5))
+//        print(".11".retainDecimal(5))
+//        print(".".retainDecimal(5))
+        print("".retainDecimal(5))
 
     }
 }

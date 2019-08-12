@@ -125,6 +125,22 @@ extension String {
     }
 
     @discardableResult
+    public func retainDecimal(_ digits: Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = digits
+        formatter.usesGroupingSeparator = false
+        var decimal = NSDecimalNumber(string: isEmpty ? "0" : self)
+        if decimal.decimalValue == .nan {
+            decimal = NSDecimalNumber(string: "0")
+        }
+        if let value = formatter.string(for: decimal) {
+            return value
+        }
+        return "0"
+    }
+
+    @discardableResult
     public func randomStringLength(len: Int) -> String {
         let randomCharacters = (0 ..< len).map { _ in self.randomElement()! }
         let randomString = String(randomCharacters)
@@ -751,7 +767,7 @@ extension UIImage {
             let context = CIContext(options: nil)
             if let bitmapImage = context.createCGImage(output, from: output.extent) {
                 // 4. 显示二维码
-                let newImage =  UIImage(cgImage: bitmapImage, scale: UIScreen.main.scale, orientation: UIImage.Orientation.up)
+                let newImage = UIImage(cgImage: bitmapImage, scale: UIScreen.main.scale, orientation: UIImage.Orientation.up)
                 return newImage
             }
         }
