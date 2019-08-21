@@ -125,6 +125,26 @@ extension String {
     }
 
     @discardableResult
+    public func safeRemoveFirst(_ k: Int = 1) -> String {
+        if count < k {
+            return self
+        }
+        var result = self
+        result.removeFirst(k)
+        return result
+    }
+
+    @discardableResult
+    public func safeRemoveLast(_ k: Int = 1) -> String {
+        if count < k {
+            return self
+        }
+        var result = self
+        result.removeLast(k)
+        return result
+    }
+
+    @discardableResult
     public func retainDecimal(_ digits: Int) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal

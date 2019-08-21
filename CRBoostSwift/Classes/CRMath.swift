@@ -420,6 +420,16 @@ public func CRUUIDString() -> String {
     return NSUUID().uuidString
 }
 
+// MARK: - timer
+
+public func CRStopTimer(_ tmr: Timer?) {
+    if let timer = tmr {
+        if timer.isValid {
+            timer.invalidate()
+        }
+    }
+}
+
 // MARK: - GCD
 
 public func CRRunOnMainThread(task: @escaping CRVoidBlock) {
