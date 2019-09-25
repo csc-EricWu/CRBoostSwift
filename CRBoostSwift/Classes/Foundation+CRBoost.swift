@@ -260,13 +260,8 @@ extension String {
     }
 
     public var doubleValue: Double {
-        if let d = Double(self) {
-            return d
-        } else if boolValue == true {
-            return 1
-        } else {
-            return 0
-        }
+        let decimal = NSDecimalNumber(string: self)
+        return decimal == .notANumber ? .zero : decimal.doubleValue
     }
 
     public var floatValue: Float {
