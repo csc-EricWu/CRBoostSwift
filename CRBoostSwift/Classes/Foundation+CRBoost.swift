@@ -265,7 +265,7 @@ extension String {
     }
 
     public var floatValue: Float {
-        return Float(self) ?? 0
+        return Float(doubleValue)
     }
 
     public var intValue: Int {
