@@ -24,6 +24,24 @@ class ViewController: UIViewController {
 //        print(".11".retainDecimal(5))
 //        print(".".retainDecimal(5))
         print("".retainDecimal(5))
+        
+        
+        let test = "Hello USA 🇺🇸!!! Hello Brazil 🇧🇷!!!"
+        print(test[safe: 10] as Any)   // "🇺🇸"
+        print(test[11])   // "!"
+        print(test[10...])   // "🇺🇸!!! Hello Brazil 🇧🇷!!!"
+        print(test[10..<12])   // "🇺🇸!"
+        print(test[10...12])   // "🇺🇸!!"
+        print(test[...10])   // "Hello USA 🇺🇸"
+        print(test[..<10])   // "Hello USA "
+        print(test.first as Any)   // "H"
+        print(test.last as Any)    // "!"
 
+        // Subscripting the Substring
+         print(test[...][...3])  // "Hell"
+
+        // Note that they all return a Substring of the original String.
+        // To create a new String from a substring
+        print(test[10...].string)  // "🇺🇸!!! Hello Brazil 🇧🇷!!!"
     }
 }

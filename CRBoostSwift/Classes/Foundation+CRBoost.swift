@@ -323,84 +323,44 @@ extension StringProtocol {
     }
 }
 
-//    https://stackoverflow.com/questions/24092884/get-nth-character-of-a-string-in-swift-programming-language
-extension String {
-    public subscript(i: Int) -> Character {
-        return self[index(startIndex, offsetBy: i)]
+// https://stackoverflow.com/questions/24092884/get-nth-character-of-a-string-in-swift-programming-language/38215613#38215613
+extension StringProtocol {
+    public subscript(_ offset: Int) -> Element {
+        self[index(startIndex, offsetBy: offset)]
     }
-
-    public subscript(i: Int) -> String {
-        return String(self[i] as Character)
+    
+    public subscript(_ range: Range<Int>) -> SubSequence {
+        prefix(range.lowerBound+range.count).suffix(range.count)
     }
-
-    public subscript(r: Range<Int>) -> String {
-        let start = index(startIndex, offsetBy: r.lowerBound)
-        let end = index(startIndex, offsetBy: r.upperBound)
-        return String(self[start ..< end])
+    
+    public subscript(_ range: ClosedRange<Int>) -> SubSequence {
+        prefix(range.lowerBound+range.count).suffix(range.count)
     }
-
-    public subscript(bounds: CountableRange<Int>) -> Substring {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[start ..< end]
+    
+    public subscript(_ range: PartialRangeThrough<Int>) -> SubSequence {
+        prefix(range.upperBound.advanced(by: 1))
     }
-
-    public subscript(bounds: CountableClosedRange<Int>) -> Substring {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[start ... end]
+    
+    public subscript(_ range: PartialRangeUpTo<Int>) -> SubSequence {
+        prefix(range.upperBound)
     }
-
-    public subscript(bounds: CountablePartialRangeFrom<Int>) -> Substring {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(endIndex, offsetBy: -1)
-        return self[start ... end]
-    }
-
-    public subscript(bounds: PartialRangeThrough<Int>) -> Substring {
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[startIndex ... end]
-    }
-
-    public subscript(bounds: PartialRangeUpTo<Int>) -> Substring {
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[startIndex ..< end]
+    
+    public subscript(_ range: PartialRangeFrom<Int>) -> SubSequence {
+        suffix(Swift.max(0, count-range.lowerBound))
     }
 }
 
-extension Substring {
-    public subscript(i: Int) -> Character {
-        return self[index(startIndex, offsetBy: i)]
-    }
+extension LosslessStringConvertible {
+    public var string: String { .init(self) }
+}
 
-    public subscript(bounds: CountableRange<Int>) -> Substring {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[start ..< end]
-    }
-
-    public subscript(bounds: CountableClosedRange<Int>) -> Substring {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[start ... end]
-    }
-
-    public subscript(bounds: CountablePartialRangeFrom<Int>) -> Substring {
-        let start = index(startIndex, offsetBy: bounds.lowerBound)
-        let end = index(endIndex, offsetBy: -1)
-        return self[start ... end]
-    }
-
-    public subscript(bounds: PartialRangeThrough<Int>) -> Substring {
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[startIndex ... end]
-    }
-
-    public subscript(bounds: PartialRangeUpTo<Int>) -> Substring {
-        let end = index(startIndex, offsetBy: bounds.upperBound)
-        return self[startIndex ..< end]
+extension BidirectionalCollection {
+    public subscript(safe offset: Int) -> Element? {
+        guard !isEmpty, let i = index(startIndex, offsetBy: offset, limitedBy: index(before: endIndex)) else { return nil }
+        return self[i]
     }
 }
+
 
 extension URL {
     @discardableResult
