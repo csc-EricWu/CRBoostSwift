@@ -129,6 +129,23 @@ extension UIView {
         }
     }
 
+    public func lockUserInteraction(_ duration: TimeInterval = 1.2) {
+        isUserInteractionEnabled = false
+        Utility.after(delay: duration) {
+            self.isUserInteractionEnabled = true
+        }
+        
+    }
+    @discardableResult
+    public func setRoundingRect(_ byRoundingCorners: UIRectCorner, radius: CGSize) -> CAShapeLayer {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: byRoundingCorners, cornerRadii: radius)
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        layer.mask = maskLayer
+        return maskLayer
+    }
+
+    
     public var gradientLayer: CAGradientLayer? {
         get {
             return objc_getAssociatedObject(self, &CRboostKeys.gradientLayer) as? CAGradientLayer
