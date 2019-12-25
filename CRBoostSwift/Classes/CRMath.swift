@@ -234,8 +234,13 @@ public func CRRootNaviation() -> UINavigationController? {
 }
 
 @discardableResult
+public func CRStatusBarHeight() -> CGFloat {
+    UIApplication.shared.statusBarFrame.height
+}
+
+@discardableResult
 public func CRNaviationHeight() -> CGFloat {
-    return UIApplication.shared.statusBarFrame.height + 44
+    return CRStatusBarHeight() + 44
 }
 
 @discardableResult
