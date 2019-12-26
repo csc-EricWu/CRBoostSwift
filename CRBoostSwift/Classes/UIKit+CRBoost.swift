@@ -9,14 +9,14 @@ import UIKit
 
 extension UIBarButtonItem {
     @discardableResult
-    public func barButton(image: UIImage, selectedImage: UIImage?, target: Any?, action: Selector) -> UIBarButtonItem {
+    public class func barButton(image: UIImage, selectedImage: UIImage?, target: Any?, action: Selector) -> UIBarButtonItem {
         let button = UIButton(type: UIButton.ButtonType.custom)
         button.imageView?.contentMode = .scaleAspectFit
         button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         button.setImage(image, for: .normal)
         button.setImage(selectedImage, for: .selected)
 
-        button.addTarget(self, action: action, for: .touchUpInside)
+        button.addTarget(target, action: action, for: .touchUpInside)
         return UIBarButtonItem(customView: button)
     }
 }
@@ -134,8 +134,8 @@ extension UIView {
         Utility.after(delay: duration) {
             self.isUserInteractionEnabled = true
         }
-        
     }
+
     @discardableResult
     public func setRoundingRect(_ byRoundingCorners: UIRectCorner, radius: CGSize) -> CAShapeLayer {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: byRoundingCorners, cornerRadii: radius)
@@ -145,7 +145,6 @@ extension UIView {
         return maskLayer
     }
 
-    
     public var gradientLayer: CAGradientLayer? {
         get {
             return objc_getAssociatedObject(self, &CRboostKeys.gradientLayer) as? CAGradientLayer
@@ -195,7 +194,7 @@ extension UIView {
         let view = nib![0]
         return view as! T
     }
-    
+
     @discardableResult
     public class func loadFromNib(nibName: String) -> Self {
         let nib = Bundle.main.loadNibNamed(nibName, owner: self, options: [:])
