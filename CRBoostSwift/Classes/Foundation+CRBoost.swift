@@ -818,4 +818,9 @@ extension UIColor {
         }
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
+
+    @discardableResult
+    public func image(size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
+        return UIImage.imageWithColor(self, size: size)
+    }
 }
