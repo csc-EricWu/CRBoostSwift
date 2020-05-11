@@ -46,8 +46,6 @@ extension UITableViewCell {
     }
 }
 
-extension UIWebView {
-}
 
 extension UIView {
     private struct CRboostKeys {

@@ -608,8 +608,6 @@ public func CRCallPhoneNumber(phone: String?) {
     }
     let str = "tel:\(phone!)"
     if let url = URL(string: str) {
-        let callWebview = UIWebView()
-        callWebview.loadRequest(URLRequest(url: url))
-        CRRootView().addSubview(callWebview)
+        Utility.goURL(url)
     }
 }
