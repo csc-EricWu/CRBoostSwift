@@ -123,6 +123,9 @@ public let IS_IOS10 = (kSystemVersion >= Float(10.0) && kSystemVersion <= Float(
 public let IS_IOS11 = (kSystemVersion >= Float(11.0) && kSystemVersion <= Float(12.0))
 public let IS_IOS12 = (kSystemVersion >= Float(12.0) && kSystemVersion <= Float(13.0))
 public let IS_IOS13 = (kSystemVersion >= Float(13.0) && kSystemVersion <= Float(14.0))
+public let IS_IOS14 = (kSystemVersion >= Float(14.0) && kSystemVersion <= Float(15.0))
+public let IS_IOS15 = (kSystemVersion >= Float(15.0) && kSystemVersion <= Float(16.0))
+public let IS_IOS16 = (kSystemVersion >= Float(16.0) && kSystemVersion <= Float(17.0))
 
 // application status
 public let CRAPP_IN_BACKGROUND = UIApplication.shared.applicationState == UIApplication.State.background
@@ -139,7 +142,14 @@ public func CRDisplayNetworkIndicator(flag: Bool) {
 
 public let CRAppBuild = Bundle.main.infoDictionary![kCFBundleVersionKey as String] as! String
 public let CRAppVersionShort = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
-public let CRAppName = Bundle.main.infoDictionary!["CFBundleDisplayName"] as! String
+public let CRAppName: String = {
+    var appName = Bundle.main.infoDictionary!["CFBundleDisplayName"]
+    if appName == nil {
+        appName = Bundle.main.infoDictionary![kCFBundleNameKey as String]
+    }
+    return appName as! String
+
+}()
 
 public let CRIdfa: String = {
     var idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
@@ -159,6 +169,9 @@ public let CRIdfv = UIDevice.current.identifierForVendor?.uuidString
 
 public let CRSharedApp = UIApplication.shared
 public let CRAppDelegate = CRSharedApp.delegate!
+
+@available(iOS 13.0, *)
+public let CRCurrentTheme = UITraitCollection.current.userInterfaceStyle
 
 public let CRNotificationCenter = NotificationCenter.default
 public let CRCurrentDevice = UIDevice.current

@@ -24,6 +24,8 @@ class ViewController: UIViewController {
 //        print("1".retainDecimal(5))
 //        print(".11".retainDecimal(5))
 //        print(".".retainDecimal(5))
+        
+
         print("".retainDecimal(5))
 
         let test = "Hello USA 🇺🇸!!! Hello Brazil 🇧🇷!!!"

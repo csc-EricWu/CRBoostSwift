@@ -3,25 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30CAB5DB12A46A0C8137DA3B68B8D0A2 /* CRMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE56294B9303D30AFE9B94802DB5FF3 /* CRMath.swift */; };
-		3FB418184F625A9694A9319E95AF70F3 /* Pods-CRBoostSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8888608297C9A6B55623C49D26194E8 /* Pods-CRBoostSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62B48D4BC7CAF79001140D7E8F4B4F97 /* CRMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C91824E63F24B7B7408E6D362C923D /* CRMacros.swift */; };
-		644642D6DC3D9B8E13A7741C963A892A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		833D585C92FD7B9E8C18215B75EF827F /* Foundation+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B08983508AD2BD6F00118F80C9E65 /* Foundation+CRBoost.swift */; };
-		8CADD5A2DB6BD63DB3AAA30A11CEDB4F /* CRBoostSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4BAFA8D9F6ED225BEF4BF3776D566E /* CRBoostSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E40ACA1606CB64667C0EADEB60C9081 /* CRBoostSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC1616F5691ADE9FCF1FE24C235230E /* CRBoostSwift-dummy.m */; };
-		D791561870D3B234CDD6278F1AB5A221 /* Pods-CRBoostSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CDC2170F7C0D7848D9D7AEDC8E06E2 /* Pods-CRBoostSwift_Example-dummy.m */; };
-		DA3534AF7099D501768696B37EFEAE6A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E991E5479365B9039EF7C06160748 /* Utility.swift */; };
-		DC9312DC7A964CB23668DF84D422EEC7 /* UIKit+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4DCC4FE52D7F8D8C8BF93259E81DF7 /* UIKit+CRBoost.swift */; };
-		EF027FBC4DBEC475DC89FB539C306FBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		19B3A6110206EC043268D09A4A0960B6 /* CRMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C91824E63F24B7B7408E6D362C923D /* CRMacros.swift */; };
+		307B821EA7F1767FB08D75B5B61979A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		4B199F2BD093827A11AA059A66850DE9 /* CRBoostSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A4BAFA8D9F6ED225BEF4BF3776D566E /* CRBoostSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B8B7093F8F21A54ECA2EEBE18274379 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811E991E5479365B9039EF7C06160748 /* Utility.swift */; };
+		4E7CA8272CE91A0A635B5EB03321A2CA /* CRBoostSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC1616F5691ADE9FCF1FE24C235230E /* CRBoostSwift-dummy.m */; };
+		579FFB8CDE02B2D217037DCC82E2A87B /* UIKit+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4DCC4FE52D7F8D8C8BF93259E81DF7 /* UIKit+CRBoost.swift */; };
+		6EFE89FF8F513CBCC9D922A13D987931 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7405CDDA7BBA9A41CC5266808CA910D6 /* CRMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE56294B9303D30AFE9B94802DB5FF3 /* CRMath.swift */; };
+		7BC29F7820D7FA87D2A475B5F4E3234E /* Pods-CRBoostSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CDC2170F7C0D7848D9D7AEDC8E06E2 /* Pods-CRBoostSwift_Example-dummy.m */; };
+		C44B6413A7E65FCB80BE31D6015CDDFD /* Foundation+CRBoost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190B08983508AD2BD6F00118F80C9E65 /* Foundation+CRBoost.swift */; };
+		FCF42223B677C33CD84878B8D6278CD6 /* Pods-CRBoostSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D8888608297C9A6B55623C49D26194E8 /* Pods-CRBoostSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		81CE9C9BE9726169811252DEBA9953C8 /* PBXContainerItemProxy */ = {
+		81AAE72331A4E7661499E5A4DA157CAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -36,14 +36,14 @@
 		190B08983508AD2BD6F00118F80C9E65 /* Foundation+CRBoost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Foundation+CRBoost.swift"; path = "CRBoostSwift/Classes/Foundation+CRBoost.swift"; sourceTree = "<group>"; };
 		1A4BAFA8D9F6ED225BEF4BF3776D566E /* CRBoostSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoostSwift-umbrella.h"; sourceTree = "<group>"; };
 		1A76DFF827A7B0F74BA533919777E9BF /* CRBoostSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CRBoostSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CRBoostSwift.framework; path = CRBoostSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CRBoostSwift; path = CRBoostSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4DCC4FE52D7F8D8C8BF93259E81DF7 /* UIKit+CRBoost.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+CRBoost.swift"; path = "CRBoostSwift/Classes/UIKit+CRBoost.swift"; sourceTree = "<group>"; };
 		1DA7023117221A843AFC18E40A2F81C6 /* Pods-CRBoostSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CRBoostSwift_Example.modulemap"; sourceTree = "<group>"; };
 		26FA6D04F25A44CCD587FAEB14479155 /* Pods-CRBoostSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRBoostSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		43C91824E63F24B7B7408E6D362C923D /* CRMacros.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CRMacros.swift; path = CRBoostSwift/Classes/CRMacros.swift; sourceTree = "<group>"; };
 		4E73D77F96184728FE0020949EB6E4D4 /* CRBoostSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRBoostSwift-prefix.pch"; sourceTree = "<group>"; };
 		5DE56294B9303D30AFE9B94802DB5FF3 /* CRMath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CRMath.swift; path = CRBoostSwift/Classes/CRMath.swift; sourceTree = "<group>"; };
-		6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods_CRBoostSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CRBoostSwift_Example.framework; path = "Pods-CRBoostSwift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods-CRBoostSwift_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CRBoostSwift_Example"; path = Pods_CRBoostSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		802DCBE2B1DB083BF979CC8344A591E0 /* CRBoostSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CRBoostSwift-Info.plist"; sourceTree = "<group>"; };
 		811E991E5479365B9039EF7C06160748 /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = CRBoostSwift/Classes/Utility.swift; sourceTree = "<group>"; };
@@ -61,19 +61,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		91A1ACC27F2EF87F7FEECF4667F6EBF1 /* Frameworks */ = {
+		3CC2C73118E9E782CA387C62CCBA3D63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				644642D6DC3D9B8E13A7741C963A892A /* Foundation.framework in Frameworks */,
+				6EFE89FF8F513CBCC9D922A13D987931 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		991606B86C7EAA22C0AB6B33EA34D659 /* Frameworks */ = {
+		516ECE12912C5FB01534446A2640967E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF027FBC4DBEC475DC89FB539C306FBE /* Foundation.framework in Frameworks */,
+				307B821EA7F1767FB08D75B5B61979A7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,15 +103,6 @@
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		83696DF42F4351EBFB72B0CCDAD24808 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift.framework */,
-				6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods_CRBoostSwift_Example.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		83AE0FF008E42E8F069FFA3BB2524C26 /* Support Files */ = {
@@ -158,9 +149,18 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D9DFBE14CAD645D7AC7586E41E57131B /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				83696DF42F4351EBFB72B0CCDAD24808 /* Products */,
+				CF829947E24712578AD2EC28F9389119 /* Products */,
 				B4CF988E8A9BCFAB73475FA096257A74 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		CF829947E24712578AD2EC28F9389119 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift */,
+				6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods-CRBoostSwift_Example */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -191,19 +191,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0F79E5709A8DA08BF061229E7B7642C3 /* Headers */ = {
+		58E8E6A3A000A31DFD1D2436CD5DB148 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CADD5A2DB6BD63DB3AAA30A11CEDB4F /* CRBoostSwift-umbrella.h in Headers */,
+				4B199F2BD093827A11AA059A66850DE9 /* CRBoostSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F457B79F6DA7F54A612E0C935ABCF6C /* Headers */ = {
+		D27753553E102F41463ACD18D3844589 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB418184F625A9694A9319E95AF70F3 /* Pods-CRBoostSwift_Example-umbrella.h in Headers */,
+				FCF42223B677C33CD84878B8D6278CD6 /* Pods-CRBoostSwift_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,31 +212,31 @@
 /* Begin PBXNativeTarget section */
 		271E8F2B81FA062A4DBC12C172D25376 /* Pods-CRBoostSwift_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D3DD32240D81EB2D314AE57113DBB00E /* Build configuration list for PBXNativeTarget "Pods-CRBoostSwift_Example" */;
+			buildConfigurationList = 2702796405EAA5FC15E79EDE03CC558F /* Build configuration list for PBXNativeTarget "Pods-CRBoostSwift_Example" */;
 			buildPhases = (
-				4F457B79F6DA7F54A612E0C935ABCF6C /* Headers */,
-				29163DBC3BF71BB3521AAF6307FA96B0 /* Sources */,
-				991606B86C7EAA22C0AB6B33EA34D659 /* Frameworks */,
-				2B78317596AFA61F781916FEBFA6135E /* Resources */,
+				D27753553E102F41463ACD18D3844589 /* Headers */,
+				6A6B1D785A2C986A213F98A2361FCA6D /* Sources */,
+				516ECE12912C5FB01534446A2640967E /* Frameworks */,
+				A37E401A704DBBA2DD182075E993710B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				403EAECC208FD92A20D5B53A2EB78674 /* PBXTargetDependency */,
+				3FDB521B13C949040DFF4F44DD620F48 /* PBXTargetDependency */,
 			);
 			name = "Pods-CRBoostSwift_Example";
-			productName = "Pods-CRBoostSwift_Example";
-			productReference = 6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods_CRBoostSwift_Example.framework */;
+			productName = Pods_CRBoostSwift_Example;
+			productReference = 6AB2AB4306C0CA7DE3F48AD523C9E317 /* Pods-CRBoostSwift_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 		66519C5F59EBFF4176C1A068DC04875A /* CRBoostSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A0D92986ECF16381E40187853C7A4B5 /* Build configuration list for PBXNativeTarget "CRBoostSwift" */;
+			buildConfigurationList = F3A19B92D926A73A16FB1F856A7E32E3 /* Build configuration list for PBXNativeTarget "CRBoostSwift" */;
 			buildPhases = (
-				0F79E5709A8DA08BF061229E7B7642C3 /* Headers */,
-				0BBBD7B556F3053E9A55AB81427A8238 /* Sources */,
-				91A1ACC27F2EF87F7FEECF4667F6EBF1 /* Frameworks */,
-				CF905A257BC66D991F067D5714F54301 /* Resources */,
+				58E8E6A3A000A31DFD1D2436CD5DB148 /* Headers */,
+				1DD4C5EAD1C8FACA84128898C5F1E0C7 /* Sources */,
+				3CC2C73118E9E782CA387C62CCBA3D63 /* Frameworks */,
+				FDCF4CB185C16B9697A6E7206F4F27C0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -244,7 +244,7 @@
 			);
 			name = CRBoostSwift;
 			productName = CRBoostSwift;
-			productReference = 1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift.framework */;
+			productReference = 1AB54981369D54D9827CCB36C61A5776 /* CRBoostSwift */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -253,19 +253,19 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 83696DF42F4351EBFB72B0CCDAD24808 /* Products */;
+			productRefGroup = CF829947E24712578AD2EC28F9389119 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -276,14 +276,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2B78317596AFA61F781916FEBFA6135E /* Resources */ = {
+		A37E401A704DBBA2DD182075E993710B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF905A257BC66D991F067D5714F54301 /* Resources */ = {
+		FDCF4CB185C16B9697A6E7206F4F27C0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,35 +293,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0BBBD7B556F3053E9A55AB81427A8238 /* Sources */ = {
+		1DD4C5EAD1C8FACA84128898C5F1E0C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E40ACA1606CB64667C0EADEB60C9081 /* CRBoostSwift-dummy.m in Sources */,
-				62B48D4BC7CAF79001140D7E8F4B4F97 /* CRMacros.swift in Sources */,
-				30CAB5DB12A46A0C8137DA3B68B8D0A2 /* CRMath.swift in Sources */,
-				833D585C92FD7B9E8C18215B75EF827F /* Foundation+CRBoost.swift in Sources */,
-				DC9312DC7A964CB23668DF84D422EEC7 /* UIKit+CRBoost.swift in Sources */,
-				DA3534AF7099D501768696B37EFEAE6A /* Utility.swift in Sources */,
+				4E7CA8272CE91A0A635B5EB03321A2CA /* CRBoostSwift-dummy.m in Sources */,
+				19B3A6110206EC043268D09A4A0960B6 /* CRMacros.swift in Sources */,
+				7405CDDA7BBA9A41CC5266808CA910D6 /* CRMath.swift in Sources */,
+				C44B6413A7E65FCB80BE31D6015CDDFD /* Foundation+CRBoost.swift in Sources */,
+				579FFB8CDE02B2D217037DCC82E2A87B /* UIKit+CRBoost.swift in Sources */,
+				4B8B7093F8F21A54ECA2EEBE18274379 /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29163DBC3BF71BB3521AAF6307FA96B0 /* Sources */ = {
+		6A6B1D785A2C986A213F98A2361FCA6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D791561870D3B234CDD6278F1AB5A221 /* Pods-CRBoostSwift_Example-dummy.m in Sources */,
+				7BC29F7820D7FA87D2A475B5F4E3234E /* Pods-CRBoostSwift_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		403EAECC208FD92A20D5B53A2EB78674 /* PBXTargetDependency */ = {
+		3FDB521B13C949040DFF4F44DD620F48 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CRBoostSwift;
 			target = 66519C5F59EBFF4176C1A068DC04875A /* CRBoostSwift */;
-			targetProxy = 81CE9C9BE9726169811252DEBA9953C8 /* PBXContainerItemProxy */;
+			targetProxy = 81AAE72331A4E7661499E5A4DA157CAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -454,109 +454,11 @@
 			};
 			name = Release;
 		};
-		84F0741CF598A06613E275854D5BCAAA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26FA6D04F25A44CCD587FAEB14479155 /* Pods-CRBoostSwift_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CRBoostSwift_Example/Pods-CRBoostSwift_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CRBoostSwift_Example/Pods-CRBoostSwift_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		971FC4BDA7ED72EBF5413DD7A5032AC8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F62D391C6004C0F16E3BDBAC34871A9C /* CRBoostSwift.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CRBoostSwift/CRBoostSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CRBoostSwift/CRBoostSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CRBoostSwift/CRBoostSwift.modulemap";
-				PRODUCT_MODULE_NAME = CRBoostSwift;
-				PRODUCT_NAME = CRBoostSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		AA19CF9DE2CC2062BFEB26E6FDFB65BB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5E6E97925CD08F9992BBC5CC516D079 /* CRBoostSwift.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CRBoostSwift/CRBoostSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CRBoostSwift/CRBoostSwift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CRBoostSwift/CRBoostSwift.modulemap";
-				PRODUCT_MODULE_NAME = CRBoostSwift;
-				PRODUCT_NAME = CRBoostSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CC8B990FEA919E5E9E3BB08381E87FD8 /* Release */ = {
+		6916BE41D2B69FA14E9470B8AFC1738C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF85406FD0874B705C9AED977D66EEBA /* Pods-CRBoostSwift_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -569,7 +471,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-CRBoostSwift_Example/Pods-CRBoostSwift_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-CRBoostSwift_Example/Pods-CRBoostSwift_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -586,9 +492,126 @@
 			};
 			name = Release;
 		};
+		691C5029E00EB7546682D791E50B3F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F62D391C6004C0F16E3BDBAC34871A9C /* CRBoostSwift.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CRBoostSwift/CRBoostSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CRBoostSwift/CRBoostSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CRBoostSwift/CRBoostSwift.modulemap";
+				PRODUCT_MODULE_NAME = CRBoostSwift;
+				PRODUCT_NAME = CRBoostSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C76F5DE6518DA95125C8A35A70B3A99A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5E6E97925CD08F9992BBC5CC516D079 /* CRBoostSwift.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CRBoostSwift/CRBoostSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CRBoostSwift/CRBoostSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CRBoostSwift/CRBoostSwift.modulemap";
+				PRODUCT_MODULE_NAME = CRBoostSwift;
+				PRODUCT_NAME = CRBoostSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9B0A2D44394AB311AED307C8052AEF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26FA6D04F25A44CCD587FAEB14479155 /* Pods-CRBoostSwift_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CRBoostSwift_Example/Pods-CRBoostSwift_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CRBoostSwift_Example/Pods-CRBoostSwift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2702796405EAA5FC15E79EDE03CC558F /* Build configuration list for PBXNativeTarget "Pods-CRBoostSwift_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B0A2D44394AB311AED307C8052AEF8 /* Debug */,
+				6916BE41D2B69FA14E9470B8AFC1738C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -598,20 +621,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A0D92986ECF16381E40187853C7A4B5 /* Build configuration list for PBXNativeTarget "CRBoostSwift" */ = {
+		F3A19B92D926A73A16FB1F856A7E32E3 /* Build configuration list for PBXNativeTarget "CRBoostSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA19CF9DE2CC2062BFEB26E6FDFB65BB /* Debug */,
-				971FC4BDA7ED72EBF5413DD7A5032AC8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D3DD32240D81EB2D314AE57113DBB00E /* Build configuration list for PBXNativeTarget "Pods-CRBoostSwift_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				84F0741CF598A06613E275854D5BCAAA /* Debug */,
-				CC8B990FEA919E5E9E3BB08381E87FD8 /* Release */,
+				C76F5DE6518DA95125C8A35A70B3A99A /* Debug */,
+				691C5029E00EB7546682D791E50B3F81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

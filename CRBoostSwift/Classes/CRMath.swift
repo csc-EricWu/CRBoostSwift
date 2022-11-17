@@ -194,11 +194,18 @@ public func CRScreenRect() -> CGRect {
 
 @discardableResult
 public func CRIsIphoneX() -> Bool {
-    return (CRScreenSize().equalTo(CGSize(width: 375, height: 812)) || // X  or Xs
-        CRScreenSize().equalTo(CGSize(width: 812, height: 375)) || // X  or Xs
-        CRScreenSize().equalTo(CGSize(width: 414, height: 896)) || // iPhone Xs Max | Xr
-        CRScreenSize().equalTo(CGSize(width: 896, height: 414)) // iPhone Xs Max | Xr
-    )
+    var result = false
+
+    if UIDevice.current.userInterfaceIdiom != .phone {
+        return result
+    }
+    let size = UIScreen.main.bounds.size
+    let notchValue = size.width / size.height * 100
+    let mainWindow = CRMainWindow()
+    if mainWindow.safeAreaInsets.bottom > 0.0 || notchValue == 216 || notchValue == 46 {
+        result = true
+    }
+    return result
 }
 
 @discardableResult
