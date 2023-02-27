@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/csc-EricWu/CRBoostSwift'
@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'CRBoostSwift/Classes/*.{swift}'
+  s.source_files = 'Source/Classes/*.{swift}'
   #s.xcconfig     = {'OTHER_LDFLAGS' => '-ObjC'}
 
   # s.resource_bundles = {

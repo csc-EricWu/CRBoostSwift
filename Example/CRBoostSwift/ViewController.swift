@@ -19,12 +19,10 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
 //        print("a".retainDecimal(5))
 //        print("1".retainDecimal(5))
 //        print(".11".retainDecimal(5))
 //        print(".".retainDecimal(5))
-        
 
         print("".retainDecimal(5))
 
@@ -45,5 +43,26 @@ class ViewController: UIViewController {
         // Note that they all return a Substring of the original String.
         // To create a new String from a substring
         print(test[10...].string) // "🇺🇸!!! Hello Brazil 🇧🇷!!!"
+
+        let urlRegEx = "^(http://|https://)[A-Za-z0-9.-]+(?!.*\\|\\w*$)"
+        let string = "https://pixabay.com/en/art-beauty-fairytales-fantasy-2436545/"
+        let matched = matches(for: urlRegEx, in: string)
+        print(matched)
+
+        func matches(for regex: String, in text: String) -> [String] {
+            do {
+                let regex = try NSRegularExpression(pattern: regex)
+//                regex.replaceMatchesInString(str, options: NSMatchingOptions.ReportProgress, range: NSRange(0,str.characters.count), withTemplate: "")
+
+//                regex.replaceMatches(in: string, range: <#T##NSRange#>, withTemplate: "")
+
+                let nsString = text as NSString
+                let results = regex.matches(in: text, range: NSRange(location: 0, length: nsString.length))
+                return results.map { nsString.substring(with: $0.range) }
+            } catch let error {
+                print("invalid regex: \(error.localizedDescription)")
+                return []
+            }
+        }
     }
 }

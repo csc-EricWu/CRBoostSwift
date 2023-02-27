@@ -7,6 +7,7 @@
 
 import AdSupport
 import Foundation
+import UIKit
 
 // MARK: - Hardware & OS
 

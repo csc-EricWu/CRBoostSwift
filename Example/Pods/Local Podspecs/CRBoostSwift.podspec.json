@@ -18,6 +18,6 @@
   "platforms": {
     "ios": "11.0"
   },
-  "source_files": "CRBoostSwift/Classes/*.{swift}",
+  "source_files": "Source/Classes/*.{swift}",
   "swift_version": "5.0"
 }

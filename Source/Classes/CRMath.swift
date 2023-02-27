@@ -213,9 +213,7 @@ public func CRMainWindow() -> UIWindow {
     var mainWindow: UIWindow? = UIApplication.shared.delegate?.window ?? nil
     if mainWindow == nil {
         let arrWindow = UIApplication.shared.windows
-        if arrWindow.count > 0 {
-            mainWindow = arrWindow.first
-        }
+        mainWindow = arrWindow.first(where: { $0.isKeyWindow })
     }
     return mainWindow!
 }
@@ -242,7 +240,14 @@ public func CRRootNaviation() -> UINavigationController? {
 
 @discardableResult
 public func CRStatusBarHeight() -> CGFloat {
-    UIApplication.shared.statusBarFrame.height
+    var statusBarHeight: CGFloat = 0
+    if #available(iOS 13.0, *) {
+        statusBarHeight = CRMainWindow().windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+    }
+    if statusBarHeight <= 0 {
+        statusBarHeight = UIApplication.shared.statusBarFrame.height
+    }
+    return statusBarHeight
 }
 
 @discardableResult
@@ -429,7 +434,7 @@ public func CRBitwiseHas(base: Int, bit: Int) -> Bool {
 
 @discardableResult
 public func CRUUIDString() -> String {
-    return NSUUID().uuidString
+    return UUID().uuidString
 }
 
 // MARK: - timer

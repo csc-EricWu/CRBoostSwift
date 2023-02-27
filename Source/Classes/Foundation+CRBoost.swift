@@ -9,6 +9,7 @@ import typealias CommonCrypto.CC_LONG
 import func CommonCrypto.CC_MD5
 import var CommonCrypto.CC_MD5_DIGEST_LENGTH
 import Foundation
+import UIKit
 
 extension String {
     public init(number: Int, padding: Int) {
